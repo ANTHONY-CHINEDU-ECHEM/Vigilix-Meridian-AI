@@ -1,8 +1,9 @@
 # Vigilix Meridian AI
 
 **A pharmacovigilance intelligence platform that answers drug safety questions from 131 thousand cited passages, scores spontaneous reports with four disproportionality methods, mines product labels, screens interactions and pre fills causality assessment, all on local hardware with every claim verified against its evidence.**
-
-![Vigilix Meridian overview](docs/screenshots/overview.png)
+<p align="center">
+<img width="1440" height="900" alt="overview" src="https://github.com/user-attachments/assets/d4513b72-5bf7-40aa-bbc0-f031df9155e3" />
+</p>
 
 ## Project brief
 
@@ -37,22 +38,67 @@ To run it yourself with the server and an optional local model, see [Running it]
 
 ## Screenshots
 
-| | |
-| --- | --- |
-| ![Evidence copilot](docs/screenshots/copilot.png) | ![Signal explorer](docs/screenshots/signals.png) |
-| **Evidence copilot.** A cited, verified answer about statin associated rhabdomyolysis with the evidence list and graph summary. | **Signal explorer.** EB05 against report count for one extract, unlabelled pairs highlighted, with the two by two card for the selected pair. |
-| ![Drug safety profile](docs/screenshots/drug_profile.png) | ![Knowledge graph](docs/screenshots/graph.png) |
-| **Drug safety profile.** Labelled reactions by System Organ Class next to FAERS signals, case reports and interactions. | **Knowledge graph.** A safety prioritised neighbourhood with edge provenance. |
-| ![Interaction checker](docs/screenshots/interactions.png) | ![Label intelligence](docs/screenshots/labels.png) |
-| **Interaction checker.** Pairwise levels with documented sentences, mechanisms and shared reaction groups. | **Label intelligence.** Mined terms highlighted in the label text and compared with the expert annotation. |
-| ![Case intake](docs/screenshots/case_intake.png) | ![Evaluation](docs/screenshots/evaluation.png) |
-| **Case intake and causality.** Redacted narrative, extracted pairs, seriousness and pre filled Naranjo and WHO UMC assessments. | **Evaluation and governance.** Retrieval ablation, answer faithfulness, signal detection and safety probes. |
+**Evidence copilot.** A cited, verified answer about statin associated rhabdomyolysis with the evidence list and graph summary.
+
+<p align="center">
+<img width="1440" height="2493" alt="copilot" src="https://github.com/user-attachments/assets/d184da73-e686-46ba-93c7-d7c482c92296" />
+</p>
+
+**Signal explorer.** EB05 against report count for one extract, unlabelled pairs highlighted, with the two by two card for the selected pair.
+
+<p align="center">
+<img width="1440" height="1411" alt="signals" src="https://github.com/user-attachments/assets/191d6662-db6b-4a85-9ff7-5ddfafebde9a" />
+</p>
+
+**Drug safety profile.** Labelled reactions by System Organ Class next to FAERS signals, case reports and interactions.
+
+<p align="center">
+<img width="1440" height="1175" alt="drug_profile" src="https://github.com/user-attachments/assets/b12b4d0a-203b-4397-9163-32d2df2fad2b" />
+</p>
+
+**Knowledge graph.** A safety prioritised neighbourhood with edge provenance. 
+
+<p align="center">
+<img width="1440" height="900" alt="graph" src="https://github.com/user-attachments/assets/8c430526-a568-45f6-9a74-bcf94007f7ca" />
+</p>
+
+**Interaction checker.** Pairwise levels with documented sentences, mechanisms and shared reaction groups. 
+
+<p align="center">
+<img width="1440" height="967" alt="interactions" src="https://github.com/user-attachments/assets/f17f2cc5-62fa-4731-b013-215df12077e7" />
+</p>
+
+**Label intelligence.** Mined terms highlighted in the label text and compared with the expert annotation.
+
+<p align="center">
+<img width="1440" height="1398" alt="labels" src="https://github.com/user-attachments/assets/0e94dd8e-321d-4c89-827b-2ed6291fd768" />
+</p>
+
+**Case intake and causality.** Redacted narrative, extracted pairs, seriousness and pre filled Naranjo and WHO UMC assessments. 
+
+<p align="center">
+<img width="1440" height="1605" alt="case_intake" src="https://github.com/user-attachments/assets/20b6bc29-80ee-44f3-8277-3c7fd459e682" />
+</p>
+
+**Evaluation and governance.** Retrieval ablation, answer faithfulness, signal detection and safety probes.
+
+<p align="center">
+<img width="1440" height="1178" alt="evaluation" src="https://github.com/user-attachments/assets/1ed3a796-1764-464a-b1a3-3fc1995ad6f6" />
+</p>
 
 The interface is responsive and has a dark theme.
 
-| | |
-| --- | --- |
-| ![Mobile](docs/screenshots/mobile.png) | ![Dark theme](docs/screenshots/dark.png) |
+MOBILE
+
+<p align="center">
+<img width="780" height="1688" alt="mobile" src="https://github.com/user-attachments/assets/6af4b0fa-b84f-47c8-bb89-baedb45155cc" />
+</p>
+
+DARK THEME
+
+<p align="center">
+<img width="1440" height="900" alt="dark" src="https://github.com/user-attachments/assets/c5baa72e-ff75-45d2-bd67-f9c84e5f5f6c" />
+</p>
 
 ## Architecture
 
@@ -105,7 +151,11 @@ The system has five layers, each rebuilt by one make target and each reading onl
 
 Together they make 130,957 passages from 51,707 documents (15.6 million words), and a knowledge graph of 21,084 nodes and 194,109 edges.
 
-![Knowledge base composition](reports/figures/kb_composition.png)
+KNOWLEDGE BASE COMPOSITION
+
+<p align="center">
+<img width="1191" height="555" alt="kb_composition" src="https://github.com/user-attachments/assets/631dd9c8-02ad-4439-8079-97c6765554b6" />
+</p>
 
 | Graph relation | Edges | Provenance |
 | --- | ---: | --- |
@@ -151,7 +201,9 @@ All p values are adjusted with Benjamini Hochberg. Each pair is also compared wi
 | Diversity | At most two passages per document in the final evidence |
 | Graph evidence | A citable summary of labelled, reported, literature, FAERS and interaction edges for the linked drug and reaction pairs |
 
-![Dual encoder training](reports/figures/dense_training.png)
+<p align="center">
+<img width="774" height="509" alt="dense_training" src="https://github.com/user-attachments/assets/19d1ca23-4bf1-4221-9631-c806afd62eee" />
+</p>
 
 ### Writing and verification
 
@@ -200,11 +252,15 @@ Relevance is graded before retrieval: grade 2 for passages from the source docum
 | Entity routed BM25 | 0.900 | 0.767 | 0.858 | 0.804 | 8.4 |
 | **Full pipeline with reranker** | **1.000** | **0.967** | **0.951** | **0.940** | 69.7 |
 
-![Retrieval ablation](reports/figures/retrieval_ablation.png)
+<p align="center">
+<img width="1134" height="599" alt="retrieval_ablation" src="https://github.com/user-attachments/assets/ed0963c3-0876-4a1a-9e87-3d9461e8a584" />
+</p>
 
 The full pipeline improves on the best single generator by 26.2 nDCG@10 points on the blind set. The reranker learned to trust fusion first, then entity routing and exact drug matches:
 
-![Reranker feature importance](reports/figures/reranker_importance.png)
+<p align="center">
+<img width="987" height="625" alt="reranker_importance" src="https://github.com/user-attachments/assets/339f6286-5889-4e78-a3aa-6e154ced0262" />
+</p>
 
 | Reranker | Value |
 | --- | --- |
@@ -245,7 +301,9 @@ Measured with the extractive writer over all 90 development and blind questions,
 
 Overall AUROC 0.999 and accuracy with hard rules 98.8% on 8,965 held out sentences.
 
-![Verifier accuracy by perturbation](reports/figures/verifier_perturbations.png)
+<p align="center">
+<img width="1053" height="532" alt="verifier_perturbations" src="https://github.com/user-attachments/assets/1a5a5a95-e709-48d2-9580-903d7bb1972b" />
+</p>
 
 ### Signal detection
 
@@ -267,7 +325,9 @@ Each measure was scored against label derived references on the 7,280 drug and e
 | IC025 above 0 | 2,306 | 0.276 | 0.398 |
 | EB05 at least 2 | 1,416 | 0.266 | 0.236 |
 
-![Signal detection AUROC](reports/figures/signal_auroc.png)
+<p align="center">
+<img width="964" height="509" alt="signal_auroc" src="https://github.com/user-attachments/assets/f8632f83-4ab2-4f8c-bf54-5ba38ff988e2" />
+</p>
 
 | Extract | Pairs | Labelled share | AUROC of EB05 | AUROC of report count |
 | --- | ---: | ---: | ---: | ---: |
@@ -285,7 +345,9 @@ Removing the 164 pairs in flagged report clusters changes the EB05 rule precisio
 
 Every one of the 13 OMOP and EU ADR reference controls that overlap the extracts agrees with the EB05 rule (3 positive controls, all three statin and rhabdomyolysis pairs, flagged; 10 negative controls not flagged).
 
-![Signal screen for atorvastatin](reports/figures/signal_screen_atorvastatin.png)
+<p align="center">
+<img width="888" height="602" alt="signal_screen_atorvastatin" src="https://github.com/user-attachments/assets/d6b77406-b5fb-4cd9-9290-0d594ee624d2" />
+</p>
 
 ### Adverse event extraction
 
@@ -303,7 +365,9 @@ Test split of 4,269 sentences from 594 PubMed records never seen in training.
 | Drug and effect relations end to end, CRF | 0.639 | 0.487 | 0.553 |
 | Drug and effect relations end to end, dictionary | 0.181 | 0.170 | 0.175 |
 
-![Extraction scores](reports/figures/extraction_f1.png)
+<p align="center">
+<img width="1045" height="486" alt="extraction_f1" src="https://github.com/user-attachments/assets/e67b939d-faff-439b-bdeb-e1e11db36a4b" />
+</p>
 
 ### Label mining
 
@@ -317,7 +381,9 @@ Test split of 4,269 sentences from 594 PubMed records never seen in training.
 | EU SmPC section 4.8 | 200 | 0.899 | 0.638 | 0.746 |
 | **All sections** | 782 | 0.741 | 0.681 | 0.710 |
 
-![Label mining](reports/figures/label_mining.png)
+<p align="center">
+<img width="1123" height="532" alt="label_mining" src="https://github.com/user-attachments/assets/4b01df9c-a2b9-49d9-8298-588855958cc7" />
+</p>
 
 ## Key insights
 

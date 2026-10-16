@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vigilix-meridian"
+version = "1.0.0"
+description = "Evidence grounded pharmacovigilance intelligence: signal detection, label mining, case causality and a verified retrieval augmented copilot."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pandas>=2.1",
+  "scikit-learn>=1.4",
+  "lightgbm>=4.3",
+  "gensim>=4.3",
+  "sklearn-crfsuite>=0.5",
+  "pyreadr>=0.5",
+  "py7zr>=0.21",
+  "openpyxl>=3.1",
+  "matplotlib>=3.8",
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  "pydantic>=2.6",
+  "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.4"]
+neural = ["sentence-transformers>=3.0"]
+
+[tool.setuptools.packages.find]
+include = ["vigilix*"]
+
+[tool.setuptools.package-data]
+vigilix = ["kb/content/*.json", "eval/questions/*.json"]
+
+[tool.ruff]
+line-length = 160
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

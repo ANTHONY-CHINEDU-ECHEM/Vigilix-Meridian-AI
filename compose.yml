@@ -1,0 +1,26 @@
+# Full stack with a local language model. No query or record leaves the host.
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 5 && ollama pull ${VIGILIX_LLM_MODEL:-llama3.1:8b} && wait"]
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 30s
+      retries: 20
+  vigilix:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    environment:
+      VIGILIX_OLLAMA_URL: http://ollama:11434
+      VIGILIX_LLM_MODEL: ${VIGILIX_LLM_MODEL:-llama3.1:8b}
+      VIGILIX_LLM_PROVIDER: auto
+      VIGILIX_AUDIT_DB: /app/data/artifacts/audit.sqlite
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ollama
+volumes:
+  ollama:

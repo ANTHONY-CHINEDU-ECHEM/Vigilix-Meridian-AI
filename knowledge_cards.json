@@ -1,0 +1,695 @@
+[
+  {
+    "id": "card_spontaneous_reporting",
+    "title": "Spontaneous reporting systems: what they can and cannot show",
+    "category": "Method",
+    "body": "Spontaneous reporting systems such as FAERS in the United States, the MHRA Yellow Card scheme in the United Kingdom, EudraVigilance in the European Union and the WHO global database VigiBase collect individual case safety reports from clinicians, patients and manufacturers. They are the main source of new safety signals for rare and unexpected reactions because they cover every marketed product and every population. They have well known limitations. Reporting is voluntary and under reporting is substantial; there is no reliable denominator of exposed patients, so reporting rates are not incidence rates; reporting is stimulated by media attention, litigation and regulatory communications (notoriety bias); newly marketed drugs attract more reports in their first years (the Weber effect); the same case can enter the database several times as follow up versions or from different reporters; and reports often lack dose, timing, comorbidity or outcome. A disproportionate reporting pattern is therefore a hypothesis that needs clinical review and, where possible, confirmation in data with a denominator.",
+    "references": ["Hazell L, Shakir SA. Under reporting of adverse drug reactions: a systematic review. Drug Saf 2006;29:385.", "Weber JCP. Epidemiology of adverse reactions to NSAIDs. Adv Inflamm Res 1984;6:1."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_prr_evans",
+    "title": "Proportional reporting ratio and the Evans criteria",
+    "category": "Method",
+    "body": "The proportional reporting ratio compares the proportion of a drug's reports that mention a reaction with the same proportion among all other drugs in the database: PRR = (a / (a + b)) / (c / (c + d)), where a is the number of reports with both the drug and the reaction. Evans and colleagues proposed a widely used screening rule in which a signal is flagged when at least three reports exist, the PRR is at least 2 and the chi square statistic is at least 4. The PRR is easy to explain but unstable when counts are small, and it inherits every bias of the underlying reports. Signals meeting the rule are prioritised for case review rather than treated as confirmed adverse drug reactions.",
+    "references": ["Evans SJW, Waller PC, Davis S. Use of proportional reporting ratios for signal generation from spontaneous adverse drug reaction reports. Pharmacoepidemiol Drug Saf 2001;10:483."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_ror",
+    "title": "Reporting odds ratio",
+    "category": "Method",
+    "body": "The reporting odds ratio is the odds of a reaction being reported with the drug of interest divided by the odds of it being reported with all other drugs: ROR = (a x d) / (b x c). A common signal threshold is a lower 95 percent confidence limit above 1 with at least three cases. The ROR is used by the Netherlands Pharmacovigilance Centre Lareb and in many published FAERS analyses because it can be adjusted for covariates with logistic regression. Like the PRR it measures disproportionality of reporting, not risk, and it is sensitive to masking when a few drugs dominate the reports of a reaction.",
+    "references": ["van Puijenbroek EP, Bate A, Leufkens HG, et al. A comparison of measures of disproportionality for signal detection in spontaneous reporting systems. Pharmacoepidemiol Drug Saf 2002;11:3."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_bcpnn_ic",
+    "title": "Information component of the Bayesian confidence propagation neural network",
+    "category": "Method",
+    "body": "The Uppsala Monitoring Centre screens VigiBase with the information component, a shrinkage measure defined as the base two logarithm of observed over expected reports, with expected counts computed from the margins of the database. Adding a small pseudo count to observed and expected values pulls estimates based on few reports towards zero, which suppresses spurious signals from single cases. A drug and reaction pair is usually highlighted when the lower limit of the 95 percent credibility interval, called IC025, is above zero. The measure is symmetrical, interpretable as a log ratio and behaves well for rare combinations.",
+    "references": ["Bate A, Lindquist M, Edwards IR, et al. A Bayesian neural network method for adverse drug reaction signal generation. Eur J Clin Pharmacol 1998;54:315.", "Noren GN, Hopstadius J, Bate A. Shrinkage observed to expected ratios for robust and transparent large scale pattern discovery. Stat Methods Med Res 2013;22:57."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_mgps_ebgm",
+    "title": "Multi item gamma Poisson shrinker and the EBGM",
+    "category": "Method",
+    "body": "DuMouchel's multi item gamma Poisson shrinker models each observed count as Poisson with a mean equal to the expected count multiplied by an unknown relative reporting ratio. The ratios across the whole database are given a prior that is a mixture of two gamma distributions, fitted by maximum likelihood, and each pair receives a posterior distribution. The empirical Bayes geometric mean is the exponential of the posterior mean of the log ratio, and EB05 is its fifth percentile. The FDA has used an EB05 of at least 2 as a conservative screening threshold, which means that the reporting ratio is very likely at least double the background. Shrinkage is strongest when counts are small, so the method avoids the extreme ratios that frequentist measures produce for rare pairs.",
+    "references": ["DuMouchel W. Bayesian data mining in large frequency tables, with an application to the FDA spontaneous reporting system. Am Stat 1999;53:177.", "Szarfman A, Machado SG, O'Neill RT. Use of screening algorithms and computer systems to efficiently signal higher than expected combinations of drugs and events in the US FDA's spontaneous reports database. Drug Saf 2002;25:381."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_masking_bias",
+    "title": "Masking, competition bias and stratification",
+    "category": "Method",
+    "body": "Disproportionality measures compare a drug with every other drug in the database, so the comparator background matters. When one product accounts for a very large share of reports of a reaction, its presence inflates the background rate and can hide, or mask, signals for other products. Competition bias works similarly across reactions: a drug with a dominant, heavily reported reaction has proportionally fewer reports of everything else. Practical mitigations include removing the masking drug from the background, stratifying by age, sex and reporting year, restricting to reports from healthcare professionals, and comparing with drugs used for the same indication to reduce confounding by indication.",
+    "references": ["Wang HW, Hochberg AM, Pearson RK, Hauben M. An experimental investigation of masking in the US FDA adverse event reporting system database. Drug Saf 2010;33:1117."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_signal_management",
+    "title": "The signal management process",
+    "category": "Regulation",
+    "body": "European good pharmacovigilance practice defines a signal as information from one or more sources suggesting a new potentially causal association, or a new aspect of a known association, that justifies verification. The process runs through detection, validation, analysis and prioritisation, assessment and recommendation for action. Validation asks whether the evidence is sufficient to justify further analysis, considering clinical relevance, previous awareness, the number and quality of cases, temporal plausibility and similar findings in the literature. Prioritisation weighs seriousness, severity, the size of the exposed population and the potential for public health impact. Outcomes range from no action to label updates, risk minimisation measures, post authorisation studies or, rarely, suspension.",
+    "references": ["European Medicines Agency. Guideline on good pharmacovigilance practices, Module IX: Signal management (Rev 1)."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_who_umc_causality",
+    "title": "WHO UMC causality categories",
+    "category": "Causality",
+    "body": "The WHO Uppsala Monitoring Centre system grades the relationship between a drug and an event as certain, probable or likely, possible, unlikely, conditional or unclassified, and unassessable or unclassifiable. Certain requires a plausible time relationship, an event that cannot be explained by disease or other drugs, a clinically plausible response to withdrawal, and a pharmacologically or phenomenologically definitive event with a satisfactory rechallenge if necessary. Probable requires a reasonable time relationship, an unlikely alternative explanation and a reasonable response to withdrawal, without the need for rechallenge. Possible applies when timing is reasonable but disease or other drugs could also explain the event. The categories structure expert judgement rather than replace it.",
+    "references": ["Uppsala Monitoring Centre. The use of the WHO UMC system for standardised case causality assessment."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_naranjo",
+    "title": "Naranjo adverse drug reaction probability scale",
+    "category": "Causality",
+    "body": "The Naranjo scale scores ten questions covering previous conclusive reports, whether the event appeared after the drug was given, improvement on discontinuation or with a specific antagonist, reappearance on readministration, alternative causes, response to placebo, toxic drug concentrations, dose response, similar reactions to the same or similar drugs, and objective evidence. Each answer scores between minus one and plus two. A total of 9 or more is classed as definite, 5 to 8 as probable, 1 to 4 as possible and 0 or less as doubtful. The scale is quick and reproducible but performs less well for reactions that are idiosyncratic, delayed or occur in patients taking many drugs.",
+    "references": ["Naranjo CA, Busto U, Sellers EM, et al. A method for estimating the probability of adverse drug reactions. Clin Pharmacol Ther 1981;30:239."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_dechallenge",
+    "title": "Temporality, dechallenge and rechallenge",
+    "category": "Causality",
+    "body": "Case level causality rests on three observations. Temporality asks whether the reaction began after exposure within a time window consistent with its mechanism: minutes for anaphylaxis, days to weeks for immune mediated skin reactions, months for some organ toxicities. A positive dechallenge means that the reaction improves when the drug is stopped or the dose reduced. A positive rechallenge means that the reaction recurs on re exposure; it is strong evidence but deliberate rechallenge is unethical for serious reactions, so rechallenge information usually comes from inadvertent re exposure. Bradford Hill's considerations, including strength, consistency, specificity, biological gradient and plausibility, guide assessment across many cases.",
+    "references": ["Hill AB. The environment and disease: association or causation? Proc R Soc Med 1965;58:295."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_seriousness",
+    "title": "Seriousness criteria for adverse events",
+    "category": "Regulation",
+    "body": "Under ICH E2A an adverse event is serious if it results in death, is life threatening, requires inpatient hospitalisation or prolongs an existing hospitalisation, results in persistent or significant disability or incapacity, or is a congenital anomaly or birth defect. Other important medical events that may jeopardise the patient or require intervention to prevent one of these outcomes are also considered serious. Seriousness is a regulatory classification based on outcome and differs from severity, which describes intensity: a severe headache can be non serious. Serious unexpected suspected adverse reactions trigger expedited reporting timelines.",
+    "references": ["ICH E2A. Clinical safety data management: definitions and standards for expedited reporting. 1994."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_expectedness",
+    "title": "Expectedness and labelled reactions",
+    "category": "Regulation",
+    "body": "A reaction is expected, or listed, when its nature, severity and frequency are consistent with the reference safety information for the product, which is the summary of product characteristics in Europe and the prescribing information in the United States. A reaction that is listed but occurs with greater severity or specificity than described, for example hepatic necrosis when only raised transaminases are listed, is unexpected. Comparing disproportionality signals with the label therefore separates confirmations of known risks from potentially new signals, which are the ones that justify detailed review.",
+    "references": ["ICH E2A. Clinical safety data management: definitions and standards for expedited reporting. 1994.", "ICH E2D(R1). Post approval safety data: definitions and standards for expedited reporting."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_icsr_minimum",
+    "title": "Individual case safety reports and minimum criteria",
+    "category": "Regulation",
+    "body": "An individual case safety report is valid for regulatory reporting when it contains four minimum elements: an identifiable reporter, an identifiable patient, at least one suspect medicinal product and at least one suspected adverse reaction. Reports are exchanged electronically in the ICH E2B format, which structures patient characteristics, drugs with their role (suspect, concomitant, interacting), reactions coded in MedDRA, outcomes and a free text narrative. Follow up information creates new versions of the same case, which is why case level deduplication is essential before counting reports.",
+    "references": ["ICH E2B(R3). Electronic transmission of individual case safety reports.", "European Medicines Agency. Good pharmacovigilance practices, Module VI."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_meddra",
+    "title": "MedDRA hierarchy and standardised queries",
+    "category": "Terminology",
+    "body": "The Medical Dictionary for Regulatory Activities organises clinical terms in a five level hierarchy: System Organ Class, High Level Group Term, High Level Term, Preferred Term and Lowest Level Term. There are 27 System Organ Classes. Preferred Terms are the level usually analysed in disproportionality studies. Because the same clinical concept can be split across many Preferred Terms (for example several terms describe liver injury), Standardised MedDRA Queries group related terms so that a signal is not diluted. Analyses at a single Preferred Term can therefore underestimate a signal that is spread across synonyms.",
+    "references": ["MedDRA Maintenance and Support Services Organization. Introductory guide to MedDRA.", "Introductory guide for Standardised MedDRA Queries."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_yellow_card",
+    "title": "MHRA Yellow Card scheme and additional monitoring",
+    "category": "Regulation",
+    "body": "In the United Kingdom suspected adverse drug reactions are reported to the Medicines and Healthcare products Regulatory Agency through the Yellow Card scheme, which accepts reports from healthcare professionals, patients and carers. Medicines under additional monitoring carry an inverted black triangle in the product information, and all suspected reactions to them should be reported, including those considered minor. For established medicines, reporting is particularly requested for serious reactions, reactions in children and reactions to vaccines, biological medicines and products during pregnancy. MHRA communicates safety conclusions through Drug Safety Update.",
+    "references": ["Medicines and Healthcare products Regulatory Agency. Yellow Card: guidance for healthcare professionals."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_periodic_reports",
+    "title": "Risk management plans and periodic safety reports",
+    "category": "Regulation",
+    "body": "A risk management plan describes the known and potential important risks and the missing information for a medicine, with pharmacovigilance activities to characterise them and risk minimisation measures to reduce them. Periodic safety update reports, called periodic benefit risk evaluation reports under ICH E2C(R2), summarise new safety information at defined intervals and re evaluate the benefit risk balance. Additional risk minimisation measures include educational materials, controlled access programmes, pregnancy prevention programmes and patient alert cards.",
+    "references": ["ICH E2C(R2). Periodic benefit risk evaluation report.", "European Medicines Agency. Good pharmacovigilance practices, Modules V and VII."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_signal_refinement",
+    "title": "Refining signals with pharmacoepidemiological studies",
+    "category": "Method",
+    "body": "Signals from spontaneous reports are refined in data with a denominator such as electronic health records and claims. Common designs include the new user active comparator cohort, which compares patients starting the drug with patients starting an alternative for the same indication; the nested case control study; and the self controlled case series, in which each patient acts as their own control by comparing event rates in exposed and unexposed time windows, removing fixed confounders such as genetics and chronic comorbidity. Negative control outcomes and exposures, like those in the OMOP and EU ADR reference sets, are used to check that a method does not produce spurious associations.",
+    "references": ["Whitaker HJ, Farrington CP, Spiessens B, Musonda P. Tutorial in biostatistics: the self controlled case series method. Stat Med 2006;25:1768.", "Ryan PB, Schuemie MJ, Welebob E, et al. Defining a reference set to support methodological research in drug safety. Drug Saf 2013;36 Suppl 1:S33."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_hys_law",
+    "title": "Hy's law and serious drug induced liver injury",
+    "category": "Syndrome",
+    "body": "Hy's law describes the observation that drug induced hepatocellular injury accompanied by jaundice carries a high risk of death or liver transplantation, historically around one in ten cases. A potential Hy's law case shows an alanine or aspartate aminotransferase above three times the upper limit of normal together with total bilirubin above twice the upper limit of normal, without initial evidence of cholestasis (alkaline phosphatase below twice the upper limit) and without another explanation such as viral hepatitis. In clinical development, finding even one or two such cases on a drug is a strong predictor of serious hepatotoxicity after approval.",
+    "references": ["Temple R. Hy's law: predicting serious hepatotoxicity. Pharmacoepidemiol Drug Saf 2006;15:241.", "US FDA. Guidance for industry: drug induced liver injury, premarketing clinical evaluation. 2009."],
+    "drugs": [],
+    "reactions": ["hepatotoxicity", "drug induced liver injury", "jaundice", "hepatic failure"]
+  },
+  {
+    "id": "card_dili_patterns",
+    "title": "Patterns and assessment of drug induced liver injury",
+    "category": "Syndrome",
+    "body": "Drug induced liver injury is classified by the R ratio, the alanine aminotransferase multiple of the upper limit divided by the alkaline phosphatase multiple. An R of 5 or more indicates hepatocellular injury, 2 or less cholestatic injury and values between indicate a mixed pattern. Common causes include amoxicillin clavulanate (often cholestatic and delayed), isoniazid, nitrofurantoin, flucloxacillin, valproate, methotrexate, azathioprine, anti tuberculosis combinations, high dose acetaminophen and herbal and dietary supplements. Causality is assessed with structured tools such as RUCAM after excluding viral, autoimmune, biliary and alcohol related causes. The suspected drug should be stopped promptly.",
+    "references": ["Danan G, Teschke R. RUCAM in drug and herb induced liver injury: the update. Int J Mol Sci 2016;17:14.", "European Association for the Study of the Liver. Clinical practice guidelines: drug induced liver injury. J Hepatol 2019;70:1222."],
+    "drugs": ["amoxicillin clavulanate", "isoniazid", "nitrofurantoin", "flucloxacillin", "valproate", "methotrexate", "acetaminophen"],
+    "reactions": ["hepatotoxicity", "drug induced liver injury", "cholestasis"]
+  },
+  {
+    "id": "card_qt_torsade",
+    "title": "Drug induced QT prolongation and torsade de pointes",
+    "category": "Syndrome",
+    "body": "Many drugs prolong ventricular repolarisation by blocking the hERG potassium channel, which lengthens the QT interval and can trigger torsade de pointes, a polymorphic ventricular tachycardia that may degenerate into ventricular fibrillation. Implicated classes include class IA and III antiarrhythmics such as sotalol, dofetilide and amiodarone; macrolide and fluoroquinolone antibiotics; antipsychotics such as haloperidol; methadone; ondansetron; and the antidepressants citalopram and escitalopram, whose maximum doses were restricted by regulators because of dose dependent QT prolongation. Risk rises with female sex, older age, bradycardia, hypokalaemia, hypomagnesaemia, congenital long QT syndrome, structural heart disease and the combination of several QT prolonging drugs or of one such drug with a metabolic inhibitor. A corrected QT above 500 milliseconds or an increase of more than 60 milliseconds from baseline is generally treated as a warning sign.",
+    "references": ["Drew BJ, Ackerman MJ, Funk M, et al. Prevention of torsade de pointes in hospital settings. Circulation 2010;121:1047.", "MHRA Drug Safety Update. Citalopram and escitalopram: QT interval prolongation. December 2011."],
+    "drugs": ["sotalol", "dofetilide", "amiodarone", "haloperidol", "methadone", "ondansetron", "citalopram", "escitalopram", "azithromycin", "clarithromycin", "levofloxacin", "moxifloxacin"],
+    "reactions": ["qt prolongation", "torsade de pointes", "ventricular arrhythmia"]
+  },
+  {
+    "id": "card_serotonin_syndrome",
+    "title": "Serotonin syndrome",
+    "category": "Syndrome",
+    "body": "Serotonin syndrome results from excess serotonergic activity, usually when two or more serotonergic drugs are combined or after overdose. Typical combinations involve selective serotonin reuptake inhibitors or serotonin norepinephrine reuptake inhibitors with monoamine oxidase inhibitors, linezolid, methylene blue, tramadol, fentanyl, meperidine, lithium or St John's wort. The Hunter criteria diagnose it in a patient exposed to a serotonergic agent with spontaneous clonus, inducible or ocular clonus with agitation or diaphoresis, tremor with hyperreflexia, or hypertonia with fever and clonus. Onset is usually within 24 hours of a dose change. Management is withdrawal of the serotonergic drugs and supportive care, with specialist advice for severe cases.",
+    "references": ["Dunkley EJC, Isbister GK, Sibbritt D, et al. The Hunter serotonin toxicity criteria. QJM 2003;96:635.", "Boyer EW, Shannon M. The serotonin syndrome. N Engl J Med 2005;352:1112."],
+    "drugs": ["sertraline", "fluoxetine", "linezolid", "tramadol", "fentanyl", "meperidine", "methylene blue", "lithium"],
+    "reactions": ["serotonin syndrome"]
+  },
+  {
+    "id": "card_nms",
+    "title": "Neuroleptic malignant syndrome",
+    "category": "Syndrome",
+    "body": "Neuroleptic malignant syndrome is a rare, potentially fatal reaction to dopamine antagonists, most often high potency first generation antipsychotics such as haloperidol, but also second generation antipsychotics and antiemetics such as metoclopramide, and after abrupt withdrawal of dopaminergic drugs in Parkinson's disease. It presents with fever, generalised muscle rigidity, altered mental status and autonomic instability, with raised creatine kinase. It usually develops over days, often soon after starting or increasing a drug. Treatment is stopping the causative agent and intensive supportive care.",
+    "references": ["Strawn JR, Keck PE, Caroff SN. Neuroleptic malignant syndrome. Am J Psychiatry 2007;164:870."],
+    "drugs": ["haloperidol", "olanzapine", "risperidone", "metoclopramide"],
+    "reactions": ["neuroleptic malignant syndrome"]
+  },
+  {
+    "id": "card_sjs_ten",
+    "title": "Stevens Johnson syndrome and toxic epidermal necrolysis",
+    "category": "Syndrome",
+    "body": "Stevens Johnson syndrome and toxic epidermal necrolysis are a spectrum of severe cutaneous adverse reactions with epidermal detachment and mucosal involvement, distinguished by the body surface area affected. Most cases are drug induced and begin between four days and four weeks after starting the drug. High risk drugs include allopurinol, carbamazepine, lamotrigine, phenytoin, phenobarbital, sulfonamide antibiotics such as trimethoprim sulfamethoxazole, nevirapine and oxicam NSAIDs. Genetic associations are strong for some drugs: HLA B 15:02 with carbamazepine in people of Han Chinese and South East Asian ancestry and HLA B 58:01 with allopurinol, which is why genotype screening is recommended in some populations. Early withdrawal of the culprit drug improves survival.",
+    "references": ["Mockenhaupt M, Viboud C, Dunant A, et al. Stevens Johnson syndrome and toxic epidermal necrolysis: assessment of medication risks with emphasis on recently marketed drugs. J Invest Dermatol 2008;128:35.", "Chung WH, Hung SI, Hong HS, et al. A marker for Stevens Johnson syndrome. Nature 2004;428:486."],
+    "drugs": ["allopurinol", "carbamazepine", "lamotrigine", "phenytoin", "phenobarbital", "trimethoprim sulfamethoxazole", "nevirapine"],
+    "reactions": ["stevens johnson syndrome", "toxic epidermal necrolysis"]
+  },
+  {
+    "id": "card_dress",
+    "title": "Drug reaction with eosinophilia and systemic symptoms",
+    "category": "Syndrome",
+    "body": "DRESS is a severe delayed hypersensitivity reaction that typically begins two to eight weeks after starting the culprit drug, with fever, widespread rash, facial oedema, lymphadenopathy, eosinophilia or atypical lymphocytes, and internal organ involvement, most often the liver and kidneys. Frequent causes are aromatic anticonvulsants (carbamazepine, phenytoin, lamotrigine), allopurinol, sulfonamides, minocycline, vancomycin and some antiretrovirals. Symptoms can persist or relapse for weeks after withdrawal, and reactivation of human herpesvirus 6 is often detected. The long latency means the culprit is easily missed when only recently started drugs are considered.",
+    "references": ["Kardaun SH, Sekula P, Valeyrie Allanore L, et al. Drug reaction with eosinophilia and systemic symptoms (DRESS): an original multisystem adverse drug reaction. Br J Dermatol 2013;169:1071."],
+    "drugs": ["carbamazepine", "phenytoin", "lamotrigine", "allopurinol", "minocycline", "vancomycin"],
+    "reactions": ["drug reaction with eosinophilia and systemic symptoms"]
+  },
+  {
+    "id": "card_anaphylaxis",
+    "title": "Drug induced anaphylaxis",
+    "category": "Syndrome",
+    "body": "Anaphylaxis is a severe, life threatening systemic hypersensitivity reaction with rapid onset of airway, breathing or circulation problems, usually with skin and mucosal changes. Leading drug causes include beta lactam antibiotics, NSAIDs, neuromuscular blocking agents and other perioperative drugs, radiocontrast media, chemotherapy and biological medicines. Reactions to infusions of monoclonal antibodies may be immunoglobulin E mediated or infusion related. Intramuscular adrenaline is the first line treatment, and the culprit should be documented clearly as an allergy. Reports of anaphylaxis are always assessed as serious.",
+    "references": ["Resuscitation Council UK. Emergency treatment of anaphylaxis: guidelines for healthcare providers. 2021.", "Muraro A, Worm M, Alviani C, et al. EAACI guidelines: anaphylaxis (2021 update). Allergy 2022;77:357."],
+    "drugs": ["amoxicillin", "cephalexin"],
+    "reactions": ["anaphylactic reaction", "hypersensitivity"]
+  },
+  {
+    "id": "card_statin_myopathy",
+    "title": "Statin associated muscle symptoms and rhabdomyolysis",
+    "category": "Drug class",
+    "body": "Muscle symptoms are the most common reason people stop statins, but in blinded randomised trials most muscle aches occur at similar rates with placebo, which points to a nocebo component. True myopathy with creatine kinase elevation is uncommon and rhabdomyolysis is rare. Risk is higher with high doses, older age, hypothyroidism, renal impairment and interacting drugs: simvastatin and atorvastatin are metabolised by CYP3A4, so strong inhibitors such as clarithromycin, itraconazole and HIV protease inhibitors raise their concentrations, and gemfibrozil increases exposure to most statins. Rosuvastatin and pravastatin are less dependent on CYP3A4. Statins are also associated with a small increase in new onset diabetes, and rarely with immune mediated necrotising myopathy.",
+    "references": ["Cholesterol Treatment Trialists' Collaboration. Effect of statin therapy on muscle symptoms. Lancet 2022;400:832.", "Stroes ES, Thompson PD, Corsini A, et al. Statin associated muscle symptoms: European Atherosclerosis Society consensus. Eur Heart J 2015;36:1012."],
+    "drugs": ["simvastatin", "atorvastatin", "rosuvastatin", "pravastatin", "fluvastatin", "gemfibrozil", "clarithromycin"],
+    "reactions": ["rhabdomyolysis", "myalgia", "myopathy", "blood creatine phosphokinase increased"]
+  },
+  {
+    "id": "card_hyponatraemia",
+    "title": "Drug induced hyponatraemia and SIADH",
+    "category": "Syndrome",
+    "body": "Hyponatraemia is a common adverse effect in older adults and can cause confusion, falls, seizures and death when severe or rapid. Causes include thiazide diuretics, selective serotonin reuptake inhibitors and other antidepressants, carbamazepine and oxcarbazepine, desmopressin, proton pump inhibitors and some chemotherapy agents, often through the syndrome of inappropriate antidiuretic hormone secretion. Risk is greatest in the first weeks of treatment, in older women, in people with low body weight and when several causative drugs are combined. Sodium should be checked when such drugs are started in high risk patients.",
+    "references": ["Liamis G, Milionis H, Elisaf M. A review of drug induced hyponatremia. Am J Kidney Dis 2008;52:144."],
+    "drugs": ["hydrochlorothiazide", "sertraline", "citalopram", "carbamazepine", "oxcarbazepine", "desmopressin"],
+    "reactions": ["hyponatremia", "syndrome of inappropriate antidiuretic hormone"]
+  },
+  {
+    "id": "card_hyperkalaemia",
+    "title": "Drug induced hyperkalaemia",
+    "category": "Syndrome",
+    "body": "Drugs that reduce renal potassium excretion cause hyperkalaemia, particularly in chronic kidney disease, diabetes, heart failure and older age. They include angiotensin converting enzyme inhibitors, angiotensin receptor blockers, mineralocorticoid receptor antagonists such as spironolactone and eplerenone, potassium sparing diuretics, trimethoprim, heparins, calcineurin inhibitors and potassium supplements. Combining several of these, or adding an NSAID, multiplies risk. Potassium and renal function should be monitored after starting or increasing these drugs.",
+    "references": ["Palmer BF. Managing hyperkalemia caused by inhibitors of the renin angiotensin aldosterone system. N Engl J Med 2004;351:585."],
+    "drugs": ["lisinopril", "ramipril", "losartan", "spironolactone", "eplerenone", "trimethoprim"],
+    "reactions": ["hyperkalemia"]
+  },
+  {
+    "id": "card_triple_whammy",
+    "title": "Acute kidney injury and the triple whammy combination",
+    "category": "Interaction",
+    "body": "The combination of a diuretic, an angiotensin converting enzyme inhibitor or angiotensin receptor blocker, and an NSAID is called the triple whammy because each drug impairs a different part of renal autoregulation, and together they can precipitate acute kidney injury, especially during dehydration or intercurrent illness. Population studies found the highest risk in the first weeks after the triple combination starts. Sick day guidance advises temporarily stopping these medicines during dehydrating illness. Other nephrotoxic drugs include aminoglycosides, vancomycin (especially with piperacillin tazobactam), lithium, calcineurin inhibitors and iodinated contrast.",
+    "references": ["Lapi F, Azoulay L, Yin H, et al. Concurrent use of diuretics, angiotensin converting enzyme inhibitors, and angiotensin receptor blockers with NSAIDs and risk of acute kidney injury. BMJ 2013;346:e8525."],
+    "drugs": ["ibuprofen", "naproxen", "diclofenac", "lisinopril", "ramipril", "furosemide"],
+    "reactions": ["acute kidney injury", "renal failure"]
+  },
+  {
+    "id": "card_gi_bleeding",
+    "title": "Upper gastrointestinal bleeding with NSAIDs, antiplatelets and serotonergic antidepressants",
+    "category": "Syndrome",
+    "body": "NSAIDs and aspirin damage the gastric mucosa and impair platelet function, and are a leading cause of upper gastrointestinal bleeding. Risk increases with age, previous ulcer, higher dose, Helicobacter pylori infection and concurrent anticoagulants, antiplatelets, corticosteroids or selective serotonin reuptake inhibitors, which deplete platelet serotonin. Combining an SSRI with an NSAID raises bleeding risk more than either alone. Gastroprotection with a proton pump inhibitor is recommended for people at high risk who need these drugs.",
+    "references": ["Lanas A, Chan FKL. Peptic ulcer disease. Lancet 2017;390:613.", "Anglin R, Yuan Y, Moayyedi P, et al. Risk of upper gastrointestinal bleeding with SSRIs with or without concurrent NSAID use. Am J Gastroenterol 2014;109:811."],
+    "drugs": ["ibuprofen", "naproxen", "diclofenac", "aspirin", "sertraline", "fluoxetine", "omeprazole"],
+    "reactions": ["upper gastrointestinal bleeding", "gastrointestinal hemorrhage", "peptic ulcer"]
+  },
+  {
+    "id": "card_doac_bleeding",
+    "title": "Direct oral anticoagulants: bleeding and interactions",
+    "category": "Drug class",
+    "body": "Bleeding is the main adverse effect of the direct oral anticoagulants apixaban, rivaroxaban, edoxaban and dabigatran. Compared with warfarin they cause less intracranial haemorrhage, while gastrointestinal bleeding is similar or higher for some agents. Exposure depends on renal function, particularly for dabigatran, and on transport and metabolism: strong inhibitors of P glycoprotein and CYP3A4 increase concentrations and strong inducers such as rifampin, carbamazepine, phenytoin and St John's wort reduce them, risking thrombosis. Concomitant antiplatelets, NSAIDs and SSRIs add to bleeding risk. Dosing must follow the product information for renal function, age and weight.",
+    "references": ["Steffel J, Collins R, Antz M, et al. 2021 European Heart Rhythm Association practical guide on the use of non vitamin K antagonist oral anticoagulants. Europace 2021;23:1612."],
+    "drugs": ["apixaban", "rivaroxaban", "edoxaban", "dabigatran", "rifampin", "carbamazepine"],
+    "reactions": ["hemorrhage", "gastrointestinal hemorrhage", "intracranial hemorrhage"]
+  },
+  {
+    "id": "card_warfarin_interactions",
+    "title": "Warfarin interactions",
+    "category": "Interaction",
+    "body": "Warfarin has a narrow therapeutic index and its S enantiomer is metabolised mainly by CYP2C9, so inhibitors of that enzyme raise the international normalised ratio and the risk of bleeding. Clinically important interacting drugs include amiodarone, fluconazole and other azole antifungals, metronidazole, trimethoprim sulfamethoxazole and some macrolides; enzyme inducers such as rifampin and carbamazepine lower the INR. Antiplatelets, NSAIDs and SSRIs add pharmacodynamic bleeding risk without changing the INR. Changes in diet, alcohol intake, illness and genetic variants of CYP2C9 and VKORC1 also alter response, so the INR should be checked after any change in co medication.",
+    "references": ["Holbrook AM, Pereira JA, Labiris R, et al. Systematic overview of warfarin and its drug and food interactions. Arch Intern Med 2005;165:1095."],
+    "drugs": ["warfarin", "amiodarone", "fluconazole", "metronidazole", "trimethoprim sulfamethoxazole", "rifampin"],
+    "reactions": ["international normalized ratio increased", "hemorrhage"]
+  },
+  {
+    "id": "card_sulfonylurea_hypoglycaemia",
+    "title": "Hypoglycaemia with sulfonylureas and insulin",
+    "category": "Drug class",
+    "body": "Severe hypoglycaemia is the most important acute adverse effect of insulin and insulin secretagogues. Among sulfonylureas, long acting agents and those with active renally cleared metabolites, such as glyburide (glibenclamide), carry higher risk than gliclazide or glipizide, particularly in older people and in renal impairment. Missed meals, alcohol, weight loss and interacting drugs that inhibit sulfonylurea metabolism, such as fluconazole and trimethoprim sulfamethoxazole, contribute. Beta blockers can mask the adrenergic warning symptoms. Metformin, DPP 4 inhibitors, GLP 1 receptor agonists and SGLT2 inhibitors rarely cause hypoglycaemia on their own.",
+    "references": ["American Diabetes Association. Standards of care in diabetes, section 6: glycemic goals and hypoglycemia. Diabetes Care 2024.", "Beers criteria update expert panel. American Geriatrics Society 2023 updated Beers criteria. J Am Geriatr Soc 2023;71:2052."],
+    "drugs": ["glyburide", "glimepiride", "glipizide", "insulin glargine"],
+    "reactions": ["hypoglycemia"]
+  },
+  {
+    "id": "card_sglt2",
+    "title": "SGLT2 inhibitors: ketoacidosis, genital infections and Fournier's gangrene",
+    "category": "Drug class",
+    "body": "Sodium glucose cotransporter 2 inhibitors such as dapagliflozin, empagliflozin and canagliflozin cause genital mycotic infections and volume depletion. Diabetic ketoacidosis, which may present with only modestly raised glucose (euglycaemic ketoacidosis), was identified through spontaneous reports and led to regulatory warnings; risk is higher around surgery, acute illness, reduced carbohydrate intake and insulin dose reduction, which is why temporary interruption is advised. Fournier's gangrene, a rare necrotising infection of the perineum, was also added to the product information. An increased risk of lower limb amputation was observed with canagliflozin in one trial programme.",
+    "references": ["US FDA Drug Safety Communication. SGLT2 inhibitors: warnings about ketoacidosis and serious urinary tract infections. 2015.", "MHRA Drug Safety Update. SGLT2 inhibitors: reports of Fournier's gangrene. February 2019."],
+    "drugs": ["dapagliflozin", "empagliflozin", "canagliflozin"],
+    "reactions": ["diabetic ketoacidosis", "fournier gangrene", "genital infection"]
+  },
+  {
+    "id": "card_glp1",
+    "title": "GLP 1 receptor agonists: gastrointestinal effects and other safety topics",
+    "category": "Drug class",
+    "body": "Glucagon like peptide 1 receptor agonists including semaglutide, liraglutide, dulaglutide and tirzepatide (a dual GIP and GLP 1 agonist) commonly cause nausea, vomiting, diarrhoea and constipation, especially during dose escalation. Gallbladder events such as cholelithiasis are increased, consistent with rapid weight loss. Acute pancreatitis is listed in product information and has been reviewed repeatedly. Thyroid C cell tumours were seen in rodents, which is why medullary thyroid carcinoma history is a contraindication in the United States. Delayed gastric emptying is relevant to aspiration risk during anaesthesia, and regulators have reviewed reports of suicidal thoughts without establishing a causal link.",
+    "references": ["European Medicines Agency PRAC. Review of GLP 1 receptor agonists and suicidal thoughts. April 2024.", "Marso SP, Bain SC, Consoli A, et al. Semaglutide and cardiovascular outcomes in type 2 diabetes. N Engl J Med 2016;375:1834."],
+    "drugs": ["semaglutide", "liraglutide", "dulaglutide", "tirzepatide", "exenatide"],
+    "reactions": ["nausea", "vomiting", "pancreatitis", "cholelithiasis"]
+  },
+  {
+    "id": "card_fluoroquinolones",
+    "title": "Fluoroquinolones: disabling and potentially long lasting effects",
+    "category": "Drug class",
+    "body": "Fluoroquinolone antibiotics such as ciprofloxacin, levofloxacin and moxifloxacin are associated with tendinitis and tendon rupture (higher with corticosteroids, older age and organ transplantation), peripheral neuropathy, neuropsychiatric effects, dysglycaemia, QT prolongation and aortic aneurysm and dissection. Because some of these effects are disabling and can persist, regulators in Europe, the United Kingdom and the United States restricted use so that fluoroquinolones are not used for mild or self limiting infections and are reserved for situations where other recommended antibiotics are inappropriate. Patients should stop treatment at the first sign of tendon pain or neuropathy.",
+    "references": ["European Medicines Agency. Disabling and potentially permanent side effects lead to suspension or restrictions of quinolone and fluoroquinolone antibiotics. 2018.", "MHRA Drug Safety Update. Fluoroquinolone antibiotics: must now only be prescribed when other commonly recommended antibiotics are inappropriate. January 2024."],
+    "drugs": ["ciprofloxacin", "levofloxacin", "moxifloxacin"],
+    "reactions": ["tendon rupture", "tendonitis", "peripheral neuropathy", "aortic aneurysm"]
+  },
+  {
+    "id": "card_opioid_benzodiazepine",
+    "title": "Opioids combined with benzodiazepines or other CNS depressants",
+    "category": "Interaction",
+    "body": "Concomitant use of opioids with benzodiazepines, gabapentinoids or other central nervous system depressants increases the risk of profound sedation, respiratory depression, coma and death. In 2016 the FDA required boxed warnings on both drug classes about this combination, and regulators later added warnings for gabapentin and pregabalin with opioids. When co prescription cannot be avoided, the lowest effective doses and shortest durations should be used, patients and carers should be warned, and naloxone availability should be considered. Older adults and people with respiratory disease or sleep apnoea are at greatest risk.",
+    "references": ["US FDA Drug Safety Communication. FDA warns about serious risks and death when combining opioid pain or cough medicines with benzodiazepines. August 2016.", "MHRA Drug Safety Update. Benzodiazepines and opioids: reminder of risk of potentially fatal respiratory depression. March 2020."],
+    "drugs": ["oxycodone", "morphine", "fentanyl", "diazepam", "lorazepam", "clonazepam", "alprazolam", "gabapentin", "pregabalin", "naloxone"],
+    "reactions": ["respiratory depression", "somnolence", "overdose"]
+  },
+  {
+    "id": "card_benzodiazepines",
+    "title": "Benzodiazepines and Z drugs: dependence, falls and complex sleep behaviours",
+    "category": "Drug class",
+    "body": "Benzodiazepines such as diazepam, lorazepam, clonazepam, temazepam and midazolam, and the Z drugs zolpidem, zopiclone and zaleplon, cause sedation, impaired psychomotor performance, anterograde amnesia and, with continued use, tolerance, dependence and withdrawal reactions that can include seizures after abrupt cessation. In older adults they increase falls and hip fractures and are listed in the Beers criteria as drugs to avoid. In 2019 the FDA added a boxed warning to zolpidem, zaleplon and eszopiclone about complex sleep behaviours such as sleep walking and sleep driving, which have caused serious injuries and deaths. Paradoxical agitation can occur, particularly in children and older people.",
+    "references": ["US FDA Drug Safety Communication. Serious injuries caused by sleepwalking, sleep driving and engaging in other activities while not fully awake. April 2019.", "American Geriatrics Society 2023 updated Beers criteria. J Am Geriatr Soc 2023;71:2052."],
+    "drugs": ["diazepam", "lorazepam", "clonazepam", "temazepam", "midazolam", "nitrazepam", "zolpidem", "zaleplon"],
+    "reactions": ["somnolence", "fall", "drug dependence", "drug withdrawal syndrome", "amnesia"]
+  },
+  {
+    "id": "card_anticholinergic",
+    "title": "Anticholinergic burden in older adults",
+    "category": "Drug class",
+    "body": "Many commonly used drugs have anticholinergic activity, including first generation antihistamines such as diphenhydramine and promethazine, tricyclic antidepressants such as amitriptyline and doxepin, bladder antimuscarinics such as oxybutynin, some antipsychotics and antispasmodics. In older adults the cumulative burden is associated with confusion, delirium, constipation, urinary retention, blurred vision, falls and, in long term observational studies, cognitive decline. Scales such as the Anticholinergic Cognitive Burden score help identify patients whose medicines could be rationalised.",
+    "references": ["Coupland CAC, Hill T, Dening T, et al. Anticholinergic drug exposure and the risk of dementia. JAMA Intern Med 2019;179:1084.", "American Geriatrics Society 2023 updated Beers criteria. J Am Geriatr Soc 2023;71:2052."],
+    "drugs": ["diphenhydramine", "promethazine", "amitriptyline", "doxepin", "oxybutynin"],
+    "reactions": ["confusional state", "delirium", "constipation", "urinary retention", "fall"]
+  },
+  {
+    "id": "card_clozapine",
+    "title": "Clozapine: neutropenia, myocarditis and gastrointestinal hypomotility",
+    "category": "Drug class",
+    "body": "Clozapine is the most effective treatment for treatment resistant schizophrenia but causes severe neutropenia and agranulocytosis in a small proportion of patients, mostly in the first months, so blood monitoring is mandatory. Myocarditis and cardiomyopathy usually present within the first two months with fever, tachycardia, chest pain or raised troponin. Clozapine induced gastrointestinal hypomotility can progress to ileus, bowel obstruction and death, and regulators have emphasised constipation monitoring. Other important effects include seizures at higher doses, hypersalivation, weight gain and metabolic effects. Smoking cessation raises clozapine levels because tobacco smoke induces CYP1A2.",
+    "references": ["MHRA Drug Safety Update. Clozapine: reminder of potentially fatal risk of intestinal obstruction, faecal impaction and paralytic ileus. 2020.", "Ronaldson KJ, Fitzgerald PB, McNeil JJ. Clozapine induced myocarditis. Acta Psychiatr Scand 2015;132:231."],
+    "drugs": ["clozapine"],
+    "reactions": ["agranulocytosis", "neutropenia", "myocarditis", "ileus", "constipation"]
+  },
+  {
+    "id": "card_valproate_pregnancy",
+    "title": "Valproate in pregnancy",
+    "category": "Drug class",
+    "body": "Valproate exposure in pregnancy carries a high risk of major congenital malformations, including neural tube defects, and of neurodevelopmental disorders in children exposed in utero. Regulators require that valproate is not used in women and girls of childbearing potential unless other treatments are ineffective or not tolerated and the conditions of a pregnancy prevention programme are met, including highly effective contraception and an annual specialist review with a signed risk acknowledgement. In the United Kingdom further measures restrict starting valproate in patients under 55 years. Other antiseizure medicines with teratogenic risk include topiramate, carbamazepine and phenytoin.",
+    "references": ["MHRA Drug Safety Update. Valproate: review of safety data and new regulatory measures. 2023 and 2024.", "Meador KJ, Baker GA, Browning N, et al. Fetal antiepileptic drug exposure and cognitive outcomes at age 6 years. Lancet Neurol 2013;12:244."],
+    "drugs": ["valproate", "topiramate", "carbamazepine", "phenytoin"],
+    "reactions": ["congenital anomaly", "neural tube defect"]
+  },
+  {
+    "id": "card_isotretinoin",
+    "title": "Isotretinoin: teratogenicity and psychiatric reactions",
+    "category": "Drug class",
+    "body": "Oral isotretinoin is highly teratogenic, so it is prescribed only within a pregnancy prevention programme with pregnancy testing and effective contraception before, during and after treatment. It also causes mucocutaneous dryness, raised lipids and liver enzymes, and has been associated with psychiatric effects including depression, anxiety and, rarely, suicidal ideation, as well as reports of sexual dysfunction. United Kingdom regulators strengthened monitoring of mental health and sexual function and require two prescribers to agree treatment for patients under 18 years.",
+    "references": ["MHRA Drug Safety Update. Isotretinoin: introduction of new safety measures, including additional oversight of the initiation of treatment for patients under 18 years of age. October 2023."],
+    "drugs": ["isotretinoin"],
+    "reactions": ["depression", "suicidal ideation", "congenital anomaly"]
+  },
+  {
+    "id": "card_ici_irae",
+    "title": "Immune related adverse events with checkpoint inhibitors",
+    "category": "Drug class",
+    "body": "Immune checkpoint inhibitors targeting PD 1 (nivolumab, pembrolizumab), PD L1 (atezolizumab) and CTLA 4 (ipilimumab) can cause inflammatory toxicity in almost any organ. Common immune related adverse events include rash, colitis, hepatitis, thyroiditis and hypophysitis, while pneumonitis, myocarditis, nephritis, myositis and neurological syndromes are less common but potentially fatal. Combination CTLA 4 and PD 1 blockade causes more severe events than monotherapy. Onset can be months after the first dose or after treatment stops. Management depends on grade and generally involves withholding treatment and corticosteroids, with endocrinopathies often requiring lifelong hormone replacement.",
+    "references": ["Haanen J, Obeid M, Spain L, et al. Management of toxicities from immunotherapy: ESMO clinical practice guideline. Ann Oncol 2022;33:1217.", "Postow MA, Sidlow R, Hellmann MD. Immune related adverse events associated with immune checkpoint blockade. N Engl J Med 2018;378:158."],
+    "drugs": ["nivolumab", "pembrolizumab", "atezolizumab", "ipilimumab"],
+    "reactions": ["colitis", "hepatitis", "pneumonitis", "myocarditis", "hypothyroidism", "hypophysitis"]
+  },
+  {
+    "id": "card_methotrexate",
+    "title": "Methotrexate: dosing errors, myelosuppression and interactions",
+    "category": "Drug class",
+    "body": "Low dose methotrexate for rheumatoid arthritis and psoriasis is taken once weekly. Accidental daily instead of weekly dosing has repeatedly caused fatal toxicity, which led regulators to require prominent warnings and packaging changes. Toxicity includes bone marrow suppression, mucositis, hepatotoxicity and pneumonitis. Reduced renal clearance increases toxicity, and interacting drugs include trimethoprim and trimethoprim sulfamethoxazole (additive antifolate effect), NSAIDs at higher doses and proton pump inhibitors with high dose methotrexate. Folic acid supplementation reduces some adverse effects.",
+    "references": ["European Medicines Agency PRAC. New measures to avoid potentially fatal dosing errors with methotrexate for inflammatory diseases. July 2019."],
+    "drugs": ["methotrexate", "trimethoprim", "trimethoprim sulfamethoxazole"],
+    "reactions": ["pancytopenia", "stomatitis", "hepatotoxicity", "pneumonitis", "medication error"]
+  },
+  {
+    "id": "card_lithium",
+    "title": "Lithium toxicity",
+    "category": "Drug class",
+    "body": "Lithium has a narrow therapeutic range and is eliminated almost entirely by the kidneys, so anything that reduces renal clearance can cause toxicity: dehydration, sodium depletion, renal impairment and interacting drugs including thiazide diuretics, angiotensin converting enzyme inhibitors, angiotensin receptor blockers and NSAIDs. Toxicity presents with tremor, ataxia, confusion, vomiting and diarrhoea and can progress to seizures and coma. Long term treatment is associated with hypothyroidism, hypercalcaemia, nephrogenic diabetes insipidus and chronic kidney disease, so serum levels, renal, thyroid and calcium function require regular monitoring.",
+    "references": ["National Institute for Health and Care Excellence. Bipolar disorder: assessment and management (CG185)."],
+    "drugs": ["lithium", "hydrochlorothiazide", "lisinopril", "ibuprofen"],
+    "reactions": ["tremor", "ataxia", "hypothyroidism", "nephrogenic diabetes insipidus"]
+  },
+  {
+    "id": "card_digoxin",
+    "title": "Digoxin toxicity",
+    "category": "Drug class",
+    "body": "Digoxin toxicity causes nausea, vomiting, visual disturbance such as yellow green vision, confusion and arrhythmias including bradycardia, heart block and ventricular ectopy. Risk increases with renal impairment, older age, hypokalaemia, hypomagnesaemia and hypercalcaemia, and with drugs that raise digoxin concentrations, including amiodarone, verapamil, dronedarone, macrolides and other P glycoprotein inhibitors. Diuretic induced hypokalaemia potentiates toxicity even at therapeutic concentrations.",
+    "references": ["Pincus M. Management of digoxin toxicity. Aust Prescr 2016;39:18."],
+    "drugs": ["digoxin", "amiodarone", "verapamil", "dronedarone", "clarithromycin"],
+    "reactions": ["bradycardia", "atrioventricular block", "nausea", "vision blurred"]
+  },
+  {
+    "id": "card_nephro_ototoxic_antibiotics",
+    "title": "Aminoglycosides and vancomycin: nephrotoxicity and ototoxicity",
+    "category": "Drug class",
+    "body": "Aminoglycosides such as gentamicin and amikacin cause dose and duration related nephrotoxicity and irreversible ototoxicity, which can affect hearing and balance; a mitochondrial DNA variant (m.1555A>G) predisposes to aminoglycoside induced deafness even after a single dose. Vancomycin causes acute kidney injury, more often at high trough concentrations and when combined with piperacillin tazobactam or other nephrotoxins. Therapeutic drug monitoring and the shortest effective courses reduce harm.",
+    "references": ["MHRA Drug Safety Update. Aminoglycosides: increased risk of deafness in patients with mitochondrial DNA variants. May 2021.", "Rybak MJ, Le J, Lodise TP, et al. Therapeutic monitoring of vancomycin for serious MRSA infections. Am J Health Syst Pharm 2020;77:835."],
+    "drugs": ["gentamicin", "amikacin", "vancomycin", "piperacillin tazobactam"],
+    "reactions": ["nephrotoxicity", "acute kidney injury", "deafness", "ototoxicity"]
+  },
+  {
+    "id": "card_pancreatitis",
+    "title": "Drug induced pancreatitis",
+    "category": "Syndrome",
+    "body": "Drugs account for a small percentage of acute pancreatitis. Agents with consistent evidence include azathioprine and mercaptopurine, valproate, didanosine, mesalamine, estrogens, some diuretics, tetracyclines and asparaginase. Incretin based drugs have been studied extensively because of early spontaneous report signals. Causality is supported by onset after starting the drug, recovery on withdrawal and, rarely, recurrence on rechallenge, after excluding gallstones, alcohol and hypertriglyceridaemia.",
+    "references": ["Badalov N, Baradarian R, Iswara K, et al. Drug induced acute pancreatitis: an evidence based review. Clin Gastroenterol Hepatol 2007;5:648."],
+    "drugs": ["azathioprine", "mercaptopurine", "valproate", "asparaginase"],
+    "reactions": ["pancreatitis", "pancreatitis acute"]
+  },
+  {
+    "id": "card_ild",
+    "title": "Drug induced interstitial lung disease",
+    "category": "Syndrome",
+    "body": "Drug induced interstitial lung disease ranges from hypersensitivity pneumonitis to organising pneumonia and fibrosis. Recognised causes include amiodarone, nitrofurantoin (especially with long term use), methotrexate, bleomycin, some tyrosine kinase inhibitors, antibody drug conjugates such as trastuzumab deruxtecan, and immune checkpoint inhibitors. Symptoms are breathlessness, cough and fever with new infiltrates on imaging. Early recognition and withdrawal are essential, and corticosteroids are used for moderate to severe cases.",
+    "references": ["Skeoch S, Weatherley N, Swift AJ, et al. Drug induced interstitial lung disease: a systematic review. J Clin Med 2018;7:356."],
+    "drugs": ["amiodarone", "nitrofurantoin", "methotrexate", "bleomycin"],
+    "reactions": ["interstitial lung disease", "pneumonitis", "pulmonary fibrosis"]
+  },
+  {
+    "id": "card_cyp450",
+    "title": "Cytochrome P450 and transporter interactions",
+    "category": "Interaction",
+    "body": "Most pharmacokinetic drug interactions involve the cytochrome P450 enzymes or drug transporters such as P glycoprotein. Strong CYP3A4 inhibitors include clarithromycin, itraconazole, ketoconazole, ritonavir and cobicistat; strong inducers include rifampin, carbamazepine, phenytoin and St John's wort. CYP2D6 inhibitors such as fluoxetine, paroxetine and bupropion reduce the activation of prodrugs like codeine and tramadol and of tamoxifen to endoxifen. CYP2C9 inhibitors such as fluconazole and amiodarone increase warfarin and phenytoin exposure, while CYP2C19 inhibition by omeprazole reduces clopidogrel activation. Induction usually takes one to two weeks to develop and to resolve, while inhibition is rapid.",
+    "references": ["US FDA. Drug development and drug interactions: table of substrates, inhibitors and inducers.", "Hakkola J, Hukkanen J, Turpeinen M, Pelkonen O. Inhibition and induction of CYP enzymes in humans: an update. Arch Toxicol 2020;94:3671."],
+    "drugs": ["clarithromycin", "itraconazole", "ketoconazole", "ritonavir", "rifampin", "carbamazepine", "fluoxetine", "paroxetine", "codeine", "tamoxifen", "omeprazole", "clopidogrel"],
+    "reactions": ["drug interaction"]
+  },
+  {
+    "id": "card_nirmatrelvir_ritonavir",
+    "title": "Nirmatrelvir with ritonavir: interaction management and rebound",
+    "category": "Drug class",
+    "body": "Nirmatrelvir is co packaged with ritonavir, a strong CYP3A inhibitor used to boost nirmatrelvir exposure. Ritonavir can markedly increase concentrations of co medications that depend on CYP3A, such as some statins, antiarrhythmics, immunosuppressants, sedatives and anticoagulants, and some combinations are contraindicated; strong CYP3A inducers can reduce nirmatrelvir efficacy. Interaction screening using authoritative resources is required before prescribing. The most frequently reported adverse effects are dysgeusia and diarrhoea. Return of symptoms or a positive test after completing treatment, often called COVID 19 rebound, has been reported and also occurs without antiviral treatment.",
+    "references": ["US FDA. Paxlovid prescribing information and patient eligibility screening checklist.", "University of Liverpool. COVID 19 drug interactions resource."],
+    "drugs": ["nirmatrelvir ritonavir", "ritonavir"],
+    "reactions": ["dysgeusia", "diarrhea", "disease recurrence"]
+  },
+  {
+    "id": "card_remdesivir",
+    "title": "Remdesivir safety",
+    "category": "Drug class",
+    "body": "Remdesivir is an intravenous nucleotide analogue for COVID 19. Its product information lists transaminase elevations, hypersensitivity and infusion related reactions, and bradycardia has been reported, typically during or shortly after infusion. Liver function and renal function should be assessed before and during treatment according to the label. Because remdesivir was used mainly in hospitalised patients with severe illness, spontaneous reports frequently describe events related to the disease itself, which complicates causal interpretation of disproportionality results.",
+    "references": ["European Medicines Agency. Veklury summary of product characteristics.", "US FDA. Veklury prescribing information."],
+    "drugs": ["remdesivir"],
+    "reactions": ["alanine aminotransferase increased", "bradycardia", "infusion related reaction", "hypersensitivity"]
+  },
+  {
+    "id": "card_covid_antivirals_context",
+    "title": "Interpreting spontaneous reports for COVID 19 therapies",
+    "category": "Method",
+    "body": "COVID 19 therapies were authorised under emergency procedures and used in a rapidly changing clinical context, so their spontaneous reports are shaped by several distortions. Reports were stimulated by intense public attention, many events reflect the infection or its complications rather than the drug (confounding by indication), reporting by manufacturers of patient support programme cases inflated some categories, and administrative terms such as product use issues dominate counts. Disproportionality for terms like disease recurrence or symptom recurrence may reflect the natural history of infection or treatment failure. Comparisons should therefore use other COVID 19 therapies as the background rather than the whole database whenever possible.",
+    "references": ["Kim HJ, Yoon JH. FAERS data for investigating the safety of fast track COVID 19 drugs. 2023.", "Sakaeda T, Tamon A, Kadoyama K, Okuno Y. Data mining of the public version of the FDA adverse event reporting system. Int J Med Sci 2013;10:796."],
+    "drugs": ["remdesivir", "nirmatrelvir ritonavir", "molnupiravir", "bebtelovimab"],
+    "reactions": []
+  },
+  {
+    "id": "card_monoclonal_infusion",
+    "title": "Infusion related and hypersensitivity reactions to monoclonal antibodies",
+    "category": "Syndrome",
+    "body": "Infusion related reactions to monoclonal antibodies, including the anti SARS CoV 2 antibodies such as bebtelovimab, typically occur during or within 24 hours of administration with fever, chills, flushing, pruritus, rash, dyspnoea, hypotension or tachycardia. Most are mild to moderate and cytokine mediated, but true anaphylaxis can occur. Slowing or interrupting the infusion and treating symptoms is usually sufficient, and patients are observed after administration. Injection site reactions are the corresponding events for subcutaneous products.",
+    "references": ["US FDA. Emergency use authorization fact sheet for bebtelovimab. 2022.", "Doessegger L, Banholzer ML. Clinical development methodology for infusion related reactions with monoclonal antibodies. Clin Transl Immunology 2015;4:e39."],
+    "drugs": ["bebtelovimab", "rituximab", "infliximab"],
+    "reactions": ["infusion related reaction", "injection related reaction", "hypersensitivity"]
+  },
+  {
+    "id": "card_molnupiravir",
+    "title": "Molnupiravir: use restrictions and safety considerations",
+    "category": "Drug class",
+    "body": "Molnupiravir is an oral antiviral whose active metabolite introduces errors into viral RNA. Because of findings in animal reproduction studies and a theoretical concern about mutagenicity, authorisations advised against use in pregnancy and recommended contraception in people who could become pregnant, and it was not authorised for children in the United States. The most commonly reported adverse effects in trials were diarrhoea, nausea and dizziness. Several regulators later declined or withdrew authorisation on efficacy grounds rather than safety.",
+    "references": ["US FDA. Fact sheet for healthcare providers: emergency use authorization for molnupiravir.", "European Medicines Agency. Refusal of marketing authorisation for Lagevrio (molnupiravir). 2023."],
+    "drugs": ["molnupiravir"],
+    "reactions": ["diarrhea", "nausea", "dizziness"]
+  },
+  {
+    "id": "card_beta_blockers",
+    "title": "Beta blockers: bradycardia, bronchospasm and withdrawal",
+    "category": "Drug class",
+    "body": "Beta blockers such as atenolol, bisoprolol, metoprolol, carvedilol, propranolol, nadolol and acebutolol cause bradycardia, heart block, hypotension, fatigue, cold extremities and sleep disturbance. Non selective agents can provoke bronchospasm in asthma, and even cardioselective agents should be used cautiously in reactive airway disease. They can mask the tremor and tachycardia of hypoglycaemia. Abrupt withdrawal after long term use can precipitate rebound angina or arrhythmia. Topical timolol eye drops are absorbed systemically and can cause bradycardia and bronchospasm. Combining beta blockers with rate limiting calcium channel blockers such as verapamil or diltiazem increases the risk of severe bradycardia and heart block.",
+    "references": ["National Institute for Health and Care Excellence. British National Formulary: beta adrenoceptor blocking drugs.", "Morales DR, Jackson C, Lipworth BJ, et al. Adverse respiratory effect of acute beta blocker exposure in asthma. Chest 2014;145:779."],
+    "drugs": ["atenolol", "bisoprolol", "metoprolol", "carvedilol", "propranolol", "nadolol", "acebutolol", "timolol", "verapamil", "diltiazem"],
+    "reactions": ["bradycardia", "bronchospasm", "hypotension", "fatigue", "atrioventricular block"]
+  },
+  {
+    "id": "card_dexmedetomidine",
+    "title": "Dexmedetomidine: bradycardia and hypotension",
+    "category": "Drug class",
+    "body": "Dexmedetomidine is a selective alpha 2 adrenoceptor agonist used for sedation in intensive care and procedures. Its sympatholytic action commonly causes hypotension and bradycardia, and loading doses can cause transient hypertension. Sinus arrest has been reported. A large randomised trial found higher mortality with dexmedetomidine in intensive care patients aged 65 years or younger, which led European regulators to add a warning. Patients with heart block, severe ventricular dysfunction or hypovolaemia are at greater risk of haemodynamic effects.",
+    "references": ["Shehabi Y, Howe BD, Bellomo R, et al. Early sedation with dexmedetomidine in critically ill patients. N Engl J Med 2019;380:2506.", "European Medicines Agency PRAC. Dexmedetomidine: increased risk of mortality in intensive care unit patients aged 65 years or younger. 2022."],
+    "drugs": ["dexmedetomidine"],
+    "reactions": ["bradycardia", "hypotension", "sinus arrest"]
+  },
+  {
+    "id": "card_mirtazapine",
+    "title": "Mirtazapine safety",
+    "category": "Drug class",
+    "body": "Mirtazapine is a noradrenergic and specific serotonergic antidepressant whose antihistaminic action causes sedation, increased appetite and weight gain, effects that are dose dependent and often prominent at lower doses. Rare but serious reactions include bone marrow depression with agranulocytosis, hyponatraemia, and severe cutaneous reactions including DRESS. As with other antidepressants, suicidal thoughts can emerge early in treatment in young people. Discontinuation symptoms can occur on abrupt withdrawal.",
+    "references": ["European Medicines Agency. Mirtazapine summary of product characteristics.", "Anttila SA, Leinonen EV. A review of the pharmacological and clinical profile of mirtazapine. CNS Drug Rev 2001;7:249."],
+    "drugs": ["mirtazapine"],
+    "reactions": ["weight increased", "somnolence", "agranulocytosis", "hyponatremia"]
+  },
+  {
+    "id": "card_diphenhydramine",
+    "title": "Diphenhydramine: anticholinergic toxicity and misuse",
+    "category": "Drug class",
+    "body": "Diphenhydramine is a first generation antihistamine available without prescription in many countries as a sleep aid and allergy remedy. It causes sedation, anticholinergic effects and psychomotor impairment that can affect driving the next day. In overdose it causes an anticholinergic toxidrome with agitation, hallucinations, tachycardia, hyperthermia and seizures, and sodium channel blockade can widen the QRS complex and cause ventricular arrhythmias. Social media challenges encouraging deliberate high dose ingestion led to an FDA warning about serious problems with high doses.",
+    "references": ["US FDA Drug Safety Communication. FDA warns about serious problems with high doses of the allergy medicine diphenhydramine (Benadryl). September 2020."],
+    "drugs": ["diphenhydramine"],
+    "reactions": ["somnolence", "seizure", "hallucination", "tachycardia", "overdose"]
+  },
+  {
+    "id": "card_opioid_respiratory",
+    "title": "Opioid induced respiratory depression and naloxone",
+    "category": "Syndrome",
+    "body": "Opioids depress the brainstem respiratory drive, and respiratory depression is the main cause of opioid related deaths. Risk is highest at treatment initiation, after dose increases, with high doses, in opioid naive patients, in older people, in renal impairment for drugs with active metabolites such as morphine, and with concomitant sedatives. Tramadol and codeine carry additional risk in ultrarapid CYP2D6 metabolisers, particularly children. Naloxone reverses opioid effects but has a shorter duration of action than many opioids, so patients need observation after reversal.",
+    "references": ["Dahan A, Aarts L, Smith TW. Incidence, reversal, and prevention of opioid induced respiratory depression. Anesthesiology 2010;112:226."],
+    "drugs": ["morphine", "oxycodone", "fentanyl", "tramadol", "codeine", "methadone", "naloxone"],
+    "reactions": ["respiratory depression", "overdose"]
+  },
+  {
+    "id": "card_older_adults",
+    "title": "Polypharmacy and potentially inappropriate medicines in older adults",
+    "category": "Population",
+    "body": "Older adults experience more adverse drug reactions because of polypharmacy, altered pharmacokinetics and pharmacodynamics, frailty and multimorbidity, and a substantial share of emergency admissions in older people are caused by medicines. Explicit criteria such as the American Geriatrics Society Beers criteria and the STOPP and START criteria identify potentially inappropriate prescribing, for example long acting sulfonylureas, benzodiazepines and Z drugs, strongly anticholinergic drugs and NSAIDs in people with renal impairment or heart failure. Structured medication reviews and deprescribing reduce exposure to high risk drugs.",
+    "references": ["American Geriatrics Society 2023 updated Beers criteria. J Am Geriatr Soc 2023;71:2052.", "O'Mahony D, Cherubini A, Guiteras AR, et al. STOPP/START criteria version 3. Eur Geriatr Med 2023;14:625.", "Pirmohamed M, James S, Meakin S, et al. Adverse drug reactions as cause of admission to hospital. BMJ 2004;329:15."],
+    "drugs": ["glyburide", "diazepam", "zolpidem", "diphenhydramine", "ibuprofen"],
+    "reactions": ["fall", "confusional state", "hypoglycemia", "acute kidney injury"]
+  },
+  {
+    "id": "card_paediatrics",
+    "title": "Paediatric pharmacovigilance",
+    "category": "Population",
+    "body": "Children are exposed to many medicines that were not studied in them, so off label use is common and paediatric adverse reactions are often first identified after marketing. Developmental changes in drug metabolism alter exposure: neonates have immature glucuronidation (the cause of grey baby syndrome with chloramphenicol), and ultrarapid CYP2D6 metabolism of codeine has caused fatal respiratory depression in children, leading regulators to restrict codeine use after tonsillectomy and in children under 12 years. Product information sections on paediatric use, such as those annotated in this knowledge base, record age specific risks and the absence of established safety.",
+    "references": ["European Medicines Agency. Codeine for pain relief in children: restricted use. 2013.", "Kimland E, Odlind V. Off label drug use in pediatric patients. Clin Pharmacol Ther 2012;91:796."],
+    "drugs": ["codeine", "chloramphenicol"],
+    "reactions": ["respiratory depression"]
+  },
+  {
+    "id": "card_pregnancy_registries",
+    "title": "Medicines in pregnancy and breastfeeding",
+    "category": "Population",
+    "body": "Pregnant women are usually excluded from trials, so evidence on drug safety in pregnancy comes from pregnancy registries, cohort studies in linked health records and spontaneous reports of exposed pregnancies with outcomes. Teratogenic risk depends on the timing of exposure, with organogenesis in the first trimester the most sensitive period for structural malformations, while later exposure can affect growth and function. Labelling in the United States now uses narrative risk summaries instead of the former letter categories. Pregnancy prevention programmes exist for valproate, isotretinoin, thalidomide and its analogues, and some other medicines.",
+    "references": ["US FDA. Pregnancy and Lactation Labeling Rule. 2015.", "UK Teratology Information Service. Best use of medicines in pregnancy."],
+    "drugs": ["valproate", "isotretinoin", "thalidomide", "lenalidomide"],
+    "reactions": ["congenital anomaly"]
+  },
+  {
+    "id": "card_biosimilars",
+    "title": "Biological medicines, biosimilars and traceability",
+    "category": "Regulation",
+    "body": "Biological medicines, including monoclonal antibodies and their biosimilars, can cause immunogenicity, infusion reactions and class specific effects such as serious infections with immunosuppressants. Because products from different manufacturers are not identical, regulations require that the brand name and batch number of the biological product are recorded in adverse reaction reports so that signals can be attributed to a specific product or batch. This is especially relevant after switching between originator and biosimilar products.",
+    "references": ["European Medicines Agency. Good pharmacovigilance practices, Product or population specific considerations II: biological medicinal products."],
+    "drugs": ["infliximab", "adalimumab", "rituximab", "trastuzumab", "bevacizumab"],
+    "reactions": ["infusion related reaction", "infection"]
+  },
+  {
+    "id": "card_medication_errors",
+    "title": "Medication errors in pharmacovigilance",
+    "category": "Regulation",
+    "body": "Medication errors are unintended failures in prescribing, dispensing, preparation or administration that lead to or could lead to harm. They fall within the scope of pharmacovigilance and are reported even when no adverse reaction occurs. Common causes include look alike or sound alike names, confusing packaging, wrong dosing frequency (for example daily instead of weekly methotrexate), wrong route and calculation errors in children. In spontaneous report databases, terms such as wrong technique in product usage process or product dose omission can dominate counts and should be separated from clinical adverse reactions when screening for signals.",
+    "references": ["European Medicines Agency. Good practice guide on recording, coding, reporting and assessment of medication errors. 2015."],
+    "drugs": ["methotrexate"],
+    "reactions": ["medication error"]
+  },
+  {
+    "id": "card_vaccine_surveillance",
+    "title": "Vaccine safety surveillance and observed versus expected analysis",
+    "category": "Method",
+    "body": "Vaccine safety signals are monitored through dedicated spontaneous reporting systems such as VAERS in the United States and the Yellow Card scheme in the United Kingdom, complemented by active surveillance in health records. Because vaccines are given to large healthy populations, observed versus expected analysis is central: the number of reported cases of an event within a risk window after vaccination is compared with the number expected from background incidence in the vaccinated population. This approach identified myocarditis after mRNA COVID 19 vaccines in young men and thrombosis with thrombocytopenia syndrome after adenoviral vector vaccines.",
+    "references": ["Black SB, Law B, Chen RT, et al. The critical role of background rates of possible adverse events in the assessment of COVID 19 vaccine safety. Vaccine 2021;39:2712."],
+    "drugs": ["covid 19 mrna vaccine", "covid 19 vaccine ad26"],
+    "reactions": ["myocarditis", "thrombosis with thrombocytopenia syndrome"]
+  },
+  {
+    "id": "card_duplicates",
+    "title": "Duplicate reports and data quality in FAERS",
+    "category": "Method",
+    "body": "FAERS quarterly files contain multiple versions of the same case as follow up information arrives, and the same patient can be reported independently by a clinician, a patient and a manufacturer. Analyses should keep the latest version of each case and remove probable duplicates that share key fields such as age, sex, event date, country, drugs and reactions. Drug names are free text and must be mapped to active ingredients, and administrative terms like drug ineffective or off label use should be considered separately. Large clusters of near identical reports, for example from litigation or patient support programmes, can produce extreme disproportionality for unusual terms and are a classic cause of false signals.",
+    "references": ["Hauben M, Reich L, DeMicco J, Kim K. Extreme duplication in the US FDA adverse events reporting system database. Drug Saf 2007;30:551.", "Khaleel MA, Khan AH, Ghadzi SMS, et al. A standardized dataset of a spontaneous adverse event reporting system. Healthcare 2022;10:420."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_disproportionality_not_causality",
+    "title": "Disproportionality is not causality",
+    "category": "Method",
+    "body": "A high reporting ratio means that a reaction is reported more often with a drug than expected from the rest of the database. It does not estimate incidence or relative risk and can arise from confounding by indication (the disease the drug treats causes the event), protopathic bias (early symptoms of the event prompt the prescription), co prescription with a truly causative drug, notoriety, duplicates and coding artefacts. Conversely, real adverse reactions can fail to signal when masked by heavily reported drugs. Signals are therefore validated by reviewing individual cases, checking the label and the literature, assessing biological plausibility and, when needed, conducting formal studies.",
+    "references": ["Montastruc JL, Sommet A, Bagheri H, Lapeyre Mestre M. Benefits and strengths of the disproportionality analysis for identification of adverse drug reactions. Br J Clin Pharmacol 2011;72:905.", "Fusaroli M, Salvo F, Begaud B, et al. The reporting of a disproportionality analysis for drug safety signal detection using individual case safety reports in pharmacovigilance (READUS PV). Drug Saf 2024;47:575."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_time_to_onset",
+    "title": "Time to onset analysis",
+    "category": "Method",
+    "body": "The distribution of the time between starting a drug and the onset of a reaction carries causal information that disproportionality ignores. Immediate reactions such as anaphylaxis cluster within minutes to hours, immune mediated cutaneous reactions within weeks, and cumulative toxicities after months. Fitting a Weibull distribution to reported onset times characterises whether the hazard decreases, stays constant or increases over time, and comparing a drug's onset profile with that of other drugs can strengthen or weaken a signal.",
+    "references": ["Van Holle L, Zeinoun Z, Bauchau V, Verstraeten T. Using time to onset for detecting safety signals in spontaneous reports of adverse events following immunization. Pharmacoepidemiol Drug Saf 2012;21:603.", "Cornelius VR, Sauzet O, Evans SJW. A signal detection method to detect adverse drug reactions using a parametric time to event model in simulated cohort data. Drug Saf 2012;35:599."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_ddi_signal_detection",
+    "title": "Detecting drug interaction signals in spontaneous reports",
+    "category": "Method",
+    "body": "Interaction signals are sought by asking whether a reaction is reported more often with two drugs together than predicted from each drug alone. The Uppsala Monitoring Centre's Omega shrinkage measure compares the observed count for the combination with the count expected under an additive model, with shrinkage to avoid spurious results from small numbers. Other approaches add an interaction term to logistic regression models of reporting. Interaction signals are especially prone to confounding because co prescribed drugs often share indications and patient populations.",
+    "references": ["Noren GN, Sundberg R, Bate A, Edwards IR. A statistical methodology for drug drug interaction surveillance. Stat Med 2008;27:3057."],
+    "drugs": [],
+    "reactions": ["drug interaction"]
+  },
+  {
+    "id": "card_safety_communication",
+    "title": "Safety communications and label changes",
+    "category": "Regulation",
+    "body": "When a signal is confirmed, regulators and marketing authorisation holders update the product information and communicate the change. Communication routes include direct healthcare professional communications (Dear Doctor letters), the MHRA Drug Safety Update, FDA Drug Safety Communications and EMA PRAC recommendations. Boxed warnings in United States labels highlight the most serious risks. Evaluating whether communications change prescribing and reduce harm is part of the pharmacovigilance cycle, and spontaneous reporting often rises after a communication, which must be considered when interpreting later data.",
+    "references": ["European Medicines Agency. Good pharmacovigilance practices, Module XV: Safety communication."],
+    "drugs": [],
+    "reactions": []
+  },
+  {
+    "id": "card_antiepileptic_hypersensitivity",
+    "title": "Aromatic antiseizure medicines and hypersensitivity",
+    "category": "Drug class",
+    "body": "Carbamazepine, oxcarbazepine, phenytoin, phenobarbital and lamotrigine are aromatic antiseizure medicines associated with rash, Stevens Johnson syndrome and toxic epidermal necrolysis, DRESS and hepatotoxicity, typically in the first two months. Cross reactivity between aromatic agents is common, so a patient who reacted to one should generally not receive another. For lamotrigine, risk is increased by rapid dose escalation and co administration with valproate, which inhibits its glucuronidation and roughly doubles its concentration. Levetiracetam and valproate are non aromatic alternatives.",
+    "references": ["Mockenhaupt M, Messenheimer J, Tennis P, Schlingmann J. Risk of Stevens Johnson syndrome and toxic epidermal necrolysis in new users of antiepileptics. Neurology 2005;64:1134."],
+    "drugs": ["carbamazepine", "oxcarbazepine", "phenytoin", "phenobarbital", "lamotrigine", "valproate", "levetiracetam"],
+    "reactions": ["rash", "stevens johnson syndrome", "drug reaction with eosinophilia and systemic symptoms"]
+  },
+  {
+    "id": "card_antipsychotic_metabolic",
+    "title": "Antipsychotics: metabolic effects, stroke and mortality in dementia",
+    "category": "Drug class",
+    "body": "Second generation antipsychotics, particularly olanzapine and clozapine, cause weight gain, dyslipidaemia and hyperglycaemia, so metabolic monitoring is recommended. In older people with dementia, antipsychotics increase the risk of stroke and death, which led to boxed warnings and regulatory advice to limit their use for behavioural symptoms to severe cases for the shortest time. First generation agents carry more extrapyramidal effects and tardive dyskinesia, and several antipsychotics prolong the QT interval. Hyperprolactinaemia is common with risperidone and amisulpride.",
+    "references": ["Schneider LS, Dagerman KS, Insel P. Risk of death with atypical antipsychotic drug treatment for dementia. JAMA 2005;294:1934.", "De Hert M, Detraux J, van Winkel R, et al. Metabolic and cardiovascular adverse effects associated with antipsychotic drugs. Nat Rev Endocrinol 2012;8:114."],
+    "drugs": ["olanzapine", "clozapine", "risperidone", "quetiapine", "haloperidol", "aripiprazole"],
+    "reactions": ["weight increased", "hyperglycemia", "cerebrovascular accident", "tardive dyskinesia", "hyperprolactinemia"]
+  },
+  {
+    "id": "card_ssri_class",
+    "title": "Selective serotonin reuptake inhibitors: class adverse effects",
+    "category": "Drug class",
+    "body": "Selective serotonin reuptake inhibitors commonly cause nausea, sleep disturbance, sexual dysfunction and agitation early in treatment. Clinically important risks include hyponatraemia in older people, bleeding (particularly gastrointestinal, and increased with NSAIDs and anticoagulants), serotonin syndrome in combination with other serotonergic drugs, QT prolongation with citalopram and escitalopram, and discontinuation symptoms on abrupt withdrawal, especially with paroxetine. Antidepressants carry warnings about suicidal thoughts and behaviour in children, adolescents and young adults early in treatment. Persistent sexual dysfunction after stopping has been added to product information.",
+    "references": ["MHRA Drug Safety Update. SSRIs and SNRIs: very rare reports of persistent sexual dysfunction after treatment. 2019.", "Hammad TA, Laughren T, Racoosin J. Suicidality in pediatric patients treated with antidepressant drugs. Arch Gen Psychiatry 2006;63:332."],
+    "drugs": ["sertraline", "fluoxetine", "citalopram", "escitalopram", "paroxetine"],
+    "reactions": ["nausea", "hyponatremia", "hemorrhage", "sexual dysfunction", "suicidal ideation", "drug withdrawal syndrome"]
+  },
+  {
+    "id": "card_ppi_long_term",
+    "title": "Long term proton pump inhibitor use",
+    "category": "Drug class",
+    "body": "Proton pump inhibitors are well tolerated in the short term. Long term use has been associated, mostly in observational studies, with hypomagnesaemia, vitamin B12 deficiency, Clostridioides difficile infection, fractures and, rarely, subacute cutaneous lupus erythematosus and acute interstitial nephritis. Some associations are likely affected by confounding because sicker patients receive PPIs. Hypomagnesaemia is clinically important because it can cause arrhythmias and potentiate digoxin toxicity. Regular review of the continuing need for treatment is recommended.",
+    "references": ["MHRA Drug Safety Update. Proton pump inhibitors: very low risk of subacute cutaneous lupus erythematosus. 2015.", "Moayyedi P, Eikelboom JW, Bosch J, et al. Safety of proton pump inhibitors based on a large, multi year, randomized trial. Gastroenterology 2019;157:682."],
+    "drugs": ["omeprazole", "esomeprazole", "pantoprazole", "lansoprazole"],
+    "reactions": ["hypomagnesemia", "clostridium difficile infection", "fracture"]
+  },
+  {
+    "id": "card_tki_class",
+    "title": "Tyrosine kinase inhibitors: class and target specific toxicities",
+    "category": "Drug class",
+    "body": "Small molecule kinase inhibitors used in oncology share adverse effects such as diarrhoea, fatigue, rash and liver enzyme elevation, while target specific toxicities include hypertension, proteinuria and hand foot skin reaction with VEGF receptor inhibitors (sunitinib, pazopanib, axitinib, regorafenib), interstitial lung disease with EGFR inhibitors, QT prolongation with vandetanib and some BCR ABL inhibitors, and arterial occlusive events with ponatinib. Many are CYP3A4 substrates, so strong inhibitors and inducers change exposure substantially. The annotated labels in this knowledge base include several of these products.",
+    "references": ["Shah RR, Morganroth J, Shah DR. Hepatotoxicity of tyrosine kinase inhibitors: clinical and regulatory perspectives. Drug Saf 2013;36:491."],
+    "drugs": ["pazopanib", "axitinib", "regorafenib", "vandetanib", "ponatinib", "bosutinib", "ibrutinib", "crizotinib"],
+    "reactions": ["hypertension", "diarrhea", "hepatotoxicity", "qt prolongation", "interstitial lung disease"]
+  },
+  {
+    "id": "card_label_sections",
+    "title": "Where safety information sits in product labels",
+    "category": "Terminology",
+    "body": "In United States prescribing information, the most serious risks appear in a boxed warning, clinically significant risks and their management in Warnings and Precautions, and the frequency of reactions observed in trials and after marketing in Adverse Reactions, with specific populations such as pregnancy, lactation and paediatric use in a separate section. In European and United Kingdom summaries of product characteristics, section 4.4 holds special warnings and precautions and section 4.8 lists undesirable effects by System Organ Class and frequency category, from very common (1 in 10 or more) to very rare (fewer than 1 in 10,000) and not known. Automated label mining needs to handle these structures, tables and negations.",
+    "references": ["US FDA. Guidance for industry: adverse reactions section of labeling for human prescription drug and biological products. 2006.", "European Commission. A guideline on summary of product characteristics (SmPC). Revision 2, 2009."],
+    "drugs": [],
+    "reactions": []
+  }
+]

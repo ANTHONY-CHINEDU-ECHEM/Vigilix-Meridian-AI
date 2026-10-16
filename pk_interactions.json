@@ -1,0 +1,49 @@
+{
+  "_note": "Curated perpetrator and victim lists for clinically important pharmacokinetic mechanisms, summarised from the US FDA table of substrates, inhibitors and inducers and standard pharmacology references. Used only to explain a possible mechanism; it does not replace a full interaction resource.",
+  "reference": "US FDA. Drug development and drug interactions: table of substrates, inhibitors and inducers.",
+  "mechanisms": {
+    "CYP3A4": {
+      "strong_inhibitors": ["clarithromycin", "itraconazole", "ketoconazole", "posaconazole", "voriconazole", "ritonavir", "cobicistat", "nirmatrelvir ritonavir", "boceprevir", "nefazodone", "idelalisib"],
+      "moderate_inhibitors": ["erythromycin", "diltiazem", "verapamil", "fluconazole", "dronedarone", "ciprofloxacin", "aprepitant", "imatinib", "crizotinib"],
+      "strong_inducers": ["rifampin", "carbamazepine", "phenytoin", "enzalutamide", "mitotane", "apalutamide", "st john s wort"],
+      "moderate_inducers": ["phenobarbital", "primidone", "efavirenz", "bosentan", "etravirine", "rifabutin"],
+      "sensitive_substrates": ["midazolam", "triazolam", "simvastatin", "lovastatin", "buspirone", "ibrutinib", "quetiapine", "lurasidone", "felodipine", "ticagrelor", "everolimus", "sirolimus", "sildenafil", "budesonide", "alprazolam", "atorvastatin", "oxycodone", "fentanyl"],
+      "narrow_index_substrates": ["tacrolimus", "cyclosporine", "fentanyl", "sirolimus", "everolimus", "pimozide", "quinidine", "ergotamine"]
+    },
+    "CYP2D6": {
+      "strong_inhibitors": ["fluoxetine", "paroxetine", "bupropion", "quinidine", "terbinafine"],
+      "moderate_inhibitors": ["duloxetine", "mirabegron", "cinacalcet"],
+      "sensitive_substrates": ["metoprolol", "desipramine", "nortriptyline", "dextromethorphan", "atomoxetine", "vortioxetine", "tolterodine", "nebivolol"],
+      "prodrugs": ["codeine", "tramadol", "tamoxifen"]
+    },
+    "CYP2C9": {
+      "moderate_inhibitors": ["fluconazole", "amiodarone", "miconazole", "trimethoprim sulfamethoxazole", "metronidazole"],
+      "inducers": ["rifampin", "carbamazepine"],
+      "narrow_index_substrates": ["warfarin", "phenytoin"],
+      "sensitive_substrates": ["celecoxib", "glipizide", "glyburide", "losartan", "tolbutamide"]
+    },
+    "CYP2C19": {
+      "strong_inhibitors": ["fluconazole", "fluvoxamine", "ticlopidine"],
+      "moderate_inhibitors": ["omeprazole", "esomeprazole", "fluoxetine", "voriconazole"],
+      "sensitive_substrates": ["citalopram", "escitalopram", "diazepam", "omeprazole", "lansoprazole"],
+      "prodrugs": ["clopidogrel"]
+    },
+    "CYP1A2": {
+      "strong_inhibitors": ["fluvoxamine", "ciprofloxacin", "enoxacin"],
+      "sensitive_substrates": ["theophylline", "tizanidine", "clozapine", "olanzapine", "caffeine", "duloxetine", "ramelteon"]
+    },
+    "P-glycoprotein": {
+      "inhibitors": ["amiodarone", "clarithromycin", "verapamil", "dronedarone", "ritonavir", "cyclosporine", "ketoconazole", "itraconazole", "quinidine", "ticagrelor"],
+      "inducers": ["rifampin", "carbamazepine", "phenytoin", "st john s wort"],
+      "sensitive_substrates": ["digoxin", "dabigatran", "colchicine", "apixaban", "rivaroxaban", "edoxaban", "fexofenadine"]
+    },
+    "OATP1B1": {
+      "inhibitors": ["cyclosporine", "gemfibrozil", "rifampin"],
+      "sensitive_substrates": ["rosuvastatin", "atorvastatin", "simvastatin", "pravastatin", "pitavastatin", "repaglinide"]
+    },
+    "Renal clearance": {
+      "reducers": ["ibuprofen", "naproxen", "diclofenac", "lisinopril", "ramipril", "losartan", "hydrochlorothiazide", "trimethoprim"],
+      "renally_cleared_narrow_index": ["lithium", "methotrexate", "digoxin", "metformin", "gentamicin", "vancomycin"]
+    }
+  }
+}

@@ -1,0 +1,842 @@
+[
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d01",
+    "top": [
+      "card_prr_evans",
+      "card_ror",
+      "ade:12554529",
+      "ade:4056835",
+      "ddi:DDI-MedLine.d140"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d02",
+    "top": [
+      "card_mgps_ebgm",
+      "faers:statins:rosuvastatin",
+      "faers:statins:atorvastatin",
+      "faers:statins:atorvastatin",
+      "faers:beta_blockers:propranolol"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d03",
+    "top": [
+      "card_bcpnn_ic",
+      "card_ddi_signal_detection",
+      "ddi:DDI-DrugBank.d776",
+      "ddi:DDI-DrugBank.d180",
+      "card_who_umc_causality"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d04",
+    "top": [
+      "card_disproportionality_not_causality",
+      "card_ror",
+      "card_duplicates",
+      "card_time_to_onset",
+      "card_masking_bias"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714574,
+    "strict_recall": 1.0,
+    "id": "d05",
+    "top": [
+      "card_spontaneous_reporting",
+      "card_masking_bias",
+      "label:uk:3096:644",
+      "label:uk:10979:563",
+      "card_spontaneous_reporting"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d06",
+    "top": [
+      "card_naranjo",
+      "cdr:24459006",
+      "cdr:16720068",
+      "ade:19299370",
+      "cdr:17919553"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d07",
+    "top": [
+      "card_seriousness",
+      "pmid:20044530",
+      "pmid:9506593",
+      "cdr:12716030",
+      "card_icsr_minimum"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d08",
+    "top": [
+      "card_icsr_minimum",
+      "label:eu:vitrakvi:763",
+      "card_spontaneous_reporting",
+      "faers:sedatives:lorazepam",
+      "ade:19183077"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d09",
+    "top": [
+      "card_signal_management",
+      "pmid:15197195",
+      "label:uk:12611:576",
+      "pmid:15197195",
+      "pmid:16075255"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d10",
+    "top": [
+      "card_hys_law",
+      "card_dili_patterns",
+      "cdr:16083708",
+      "pmid:24687830",
+      "pmid:21332248"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d11",
+    "top": [
+      "card_qt_torsade",
+      "cdr:11569530",
+      "ade:17876386",
+      "cdr:8475949",
+      "cdr:11858397"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d12",
+    "top": [
+      "card_serotonin_syndrome",
+      "ade:11816261",
+      "ade:11816261",
+      "ddi:DDI-DrugBank.d423",
+      "card_ssri_class"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d13",
+    "top": [
+      "card_sjs_ten",
+      "cdr:9721172",
+      "ade:18698687",
+      "ade:11174414",
+      "ade:12836099"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9880911023261039,
+    "strict_recall": 1.0,
+    "id": "d14",
+    "top": [
+      "card_statin_myopathy",
+      "cdr:25041770",
+      "ddi:DDI-MedLine.d25",
+      "ddi:DDI-MedLine.d25",
+      "cdr:17615423"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d15",
+    "top": [
+      "faers:statins:atorvastatin",
+      "faers:statins:atorvastatin",
+      "card_statin_myopathy",
+      "pmid:21095484",
+      "pmid:24471247"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d16",
+    "top": [
+      "faers:covid19_fast_track:nirmatrelvir ritonavir",
+      "faers:covid19_fast_track:nirmatrelvir ritonavir",
+      "card_nirmatrelvir_ritonavir",
+      "card_covid_antivirals_context",
+      "faers:sedatives:dexmedetomidine"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d17",
+    "top": [
+      "card_remdesivir",
+      "faers:covid19_fast_track:remdesivir",
+      "faers:covid19_fast_track:remdesivir",
+      "kg:drug:remdesivir",
+      "card_isotretinoin"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9191677261551536,
+    "strict_recall": 1.0,
+    "id": "d18",
+    "top": [
+      "card_dexmedetomidine",
+      "cdr:24571687",
+      "cdr:24717468",
+      "cdr:18086064",
+      "cdr:24717468"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d19",
+    "top": [
+      "card_opioid_benzodiazepine",
+      "card_benzodiazepines",
+      "ddi:DDI-DrugBank.d234",
+      "ddi:DDI-DrugBank.d234",
+      "ade:19558262"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d20",
+    "top": [
+      "card_doac_bleeding",
+      "pmid:23036896",
+      "pmid:19470889",
+      "pmid:22933567",
+      "pmid:25173541"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d21",
+    "top": [
+      "label:us:xarelto:459",
+      "label:us:xarelto:459",
+      "label:us:xarelto:460",
+      "label:us:xarelto:460",
+      "label:us:xarelto:458"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9838048780283076,
+    "strict_recall": 1.0,
+    "id": "d22",
+    "top": [
+      "label:us:pradaxa:160",
+      "label:us:pradaxa:160",
+      "label:us:pradaxa:162",
+      "label:us:pradaxa:162",
+      "card_doac_bleeding"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8869889773167732,
+    "strict_recall": 1.0,
+    "id": "d23",
+    "top": [
+      "card_sglt2",
+      "pmid:25271207",
+      "label:eu:qtrilmet:864",
+      "label:eu:qtrilmet:864",
+      "label:us:farxiga:84"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d24",
+    "top": [
+      "card_sglt2",
+      "label:us:invokana:111",
+      "label:us:invokana:111",
+      "label:us:invokana:110",
+      "label:us:invokana:110"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.913038855966019,
+    "strict_recall": 1.0,
+    "id": "d25",
+    "top": [
+      "card_glp1",
+      "pmid:26284720",
+      "pmid:25036533",
+      "label:us:victoza:450",
+      "label:us:victoza:450"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d26",
+    "top": [
+      "card_fluoroquinolones",
+      "kg:sider:ciprofloxacin",
+      "kg:sider:ciprofloxacin",
+      "kg:drug:ciprofloxacin",
+      "ade:19892516"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8071747034077971,
+    "strict_recall": 1.0,
+    "id": "d27",
+    "top": [
+      "ddi:DDI-DrugBank.d776",
+      "ddi:DDI-DrugBank.d328",
+      "card_warfarin_interactions",
+      "ddi:DDI-DrugBank.d400",
+      "ddi:DDI-DrugBank.d525"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d28",
+    "top": [
+      "card_triple_whammy",
+      "ddi:DDI-DrugBank.d400",
+      "ddi:DDI-DrugBank.d334",
+      "ade:1929024",
+      "ade:1929024"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.91311732856428,
+    "strict_recall": 1.0,
+    "id": "d29",
+    "top": [
+      "card_hyponatraemia",
+      "card_ssri_class",
+      "card_mirtazapine",
+      "pmid:22276959",
+      "pmid:24201696"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d30",
+    "top": [
+      "card_clozapine",
+      "ade:11215836",
+      "pmid:11163780",
+      "ade:19995222",
+      "cdr:17612891"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9415156288901476,
+    "strict_recall": 1.0,
+    "id": "d31",
+    "top": [
+      "card_valproate_pregnancy",
+      "card_pregnancy_registries",
+      "label:uk:518:674",
+      "label:uk:518:674",
+      "label:us:5fb753a4_19c2_46f9_b66a_2fac5263c026:977"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d32",
+    "top": [
+      "card_ici_irae",
+      "pmid:19671877",
+      "pmid:23521917",
+      "pmid:19671877",
+      "pmid:23521917"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9402879873227599,
+    "strict_recall": 1.0,
+    "id": "d33",
+    "top": [
+      "card_ici_irae",
+      "pmid:26115796",
+      "label:us:keytruda:331",
+      "label:us:keytruda:331",
+      "label:us:keytruda:330"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d34",
+    "top": [
+      "card_methotrexate",
+      "card_medication_errors",
+      "label:uk:7275:581",
+      "label:uk:7275:581",
+      "ade:1362837"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d35",
+    "top": [
+      "card_lithium",
+      "ade:6113770",
+      "ddi:DDI-DrugBank.d547",
+      "ddi:DDI-DrugBank.d400",
+      "ddi:DDI-DrugBank.d82"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d36",
+    "top": [
+      "card_digoxin",
+      "ade:1803787",
+      "kg:sider:digoxin",
+      "ddi:DDI-DrugBank.d241",
+      "ddi:DDI-DrugBank.d395"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8909179997697889,
+    "strict_recall": 1.0,
+    "id": "d37",
+    "top": [
+      "card_nephro_ototoxic_antibiotics",
+      "cdr:24923469",
+      "pmid:24385282",
+      "ade:18682542",
+      "ade:18682542"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.6352363165194673,
+    "strict_recall": 0.0,
+    "id": "d38",
+    "top": [
+      "cdr:11334364",
+      "ade:6692713",
+      "cdr:11334364",
+      "cdr:1595783",
+      "cdr:6637851"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8715805660289835,
+    "strict_recall": 1.0,
+    "id": "d39",
+    "top": [
+      "ddi:DDI-MedLine.d116",
+      "card_cyp450",
+      "ddi:DDI-DrugBank.d94",
+      "card_warfarin_interactions",
+      "ddi:DDI-DrugBank.d739"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d40",
+    "top": [
+      "card_nirmatrelvir_ritonavir",
+      "faers:covid19_fast_track:nirmatrelvir ritonavir",
+      "card_covid_antivirals_context",
+      "faers:covid19_fast_track:nirmatrelvir ritonavir",
+      "ddi:DDI-DrugBank.d124"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d41",
+    "top": [
+      "card_monoclonal_infusion",
+      "faers:covid19_fast_track:bebtelovimab",
+      "faers:covid19_fast_track:bebtelovimab",
+      "ddi:DDI-DrugBank.d288",
+      "ddi:DDI-DrugBank.d288"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d42",
+    "top": [
+      "card_antipsychotic_metabolic",
+      "ade:16480245",
+      "pmid:17606657",
+      "pmid:16797162",
+      "pmid:18794653"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d43",
+    "top": [
+      "card_ssri_class",
+      "cdr:14742097",
+      "pmid:24433574",
+      "pmid:15669895",
+      "pmid:16013899"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.44272256972879825,
+    "strict_recall": 1.0,
+    "id": "d44",
+    "top": [
+      "pmid:8884304",
+      "ddi:DDI-MedLine.d103",
+      "ddi:DDI-MedLine.d103",
+      "card_ppi_long_term",
+      "label:uk:8755:607"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9138317027803532,
+    "strict_recall": 1.0,
+    "id": "d45",
+    "top": [
+      "card_tki_class",
+      "kg:sider:pazopanib",
+      "kg:sider:pazopanib",
+      "label:us:votrient:442",
+      "pmid:22595799"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "ndcg": 0.7089874950249133,
+    "strict_recall": 1.0,
+    "id": "d46",
+    "top": [
+      "kg:sider:ponatinib",
+      "kg:sider:ponatinib",
+      "label:us:iclusig:318",
+      "label:us:iclusig:318",
+      "label:eu:iclusig:748"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d47",
+    "top": [
+      "card_antiepileptic_hypersensitivity",
+      "ade:16939867",
+      "card_dress",
+      "pmid:18204417",
+      "pmid:16649826"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d48",
+    "top": [
+      "card_diphenhydramine",
+      "card_anticholinergic",
+      "ddi:DDI-DrugBank.d296",
+      "ade:9709726",
+      "ade:12811715"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8802758403301917,
+    "strict_recall": 1.0,
+    "id": "d49",
+    "top": [
+      "card_benzodiazepines",
+      "label:uk:3976:548",
+      "label:uk:3976:548",
+      "kg:sider:zolpidem",
+      "ade:8926752"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.918071230800105,
+    "strict_recall": 1.0,
+    "id": "d50",
+    "top": [
+      "card_beta_blockers",
+      "cdr:6615679",
+      "kg:sider:timolol",
+      "kg:sider:timolol",
+      "ade:7282702"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9040732589236655,
+    "strict_recall": 1.0,
+    "id": "d51",
+    "top": [
+      "card_sulfonylurea_hypoglycaemia",
+      "card_older_adults",
+      "kg:sider:glyburide",
+      "ade:15362597",
+      "kg:sider:glyburide"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d52",
+    "top": [
+      "ade:10030778",
+      "cdr:15985056",
+      "ade:9220046",
+      "ade:9220046",
+      "cdr:15602202"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9937947856332163,
+    "strict_recall": 1.0,
+    "id": "d53",
+    "top": [
+      "cdr:24975837",
+      "cdr:20510337",
+      "cdr:11745184",
+      "cdr:24778426",
+      "cdr:24778426"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.694355946562825,
+    "strict_recall": 0.0,
+    "id": "d54",
+    "top": [
+      "kg:sider:isoniazid",
+      "pmid:22410137",
+      "pmid:23533318",
+      "pmid:22410137",
+      "pmid:11263519"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d55",
+    "top": [
+      "card_nms",
+      "ade:9776099",
+      "ade:11819156",
+      "ade:6113770",
+      "ade:15840734"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.8328978515038054,
+    "strict_recall": 1.0,
+    "id": "d56",
+    "top": [
+      "cdr:17255138",
+      "pmid:22971487",
+      "pmid:16960941",
+      "pmid:15273528",
+      "pmid:10955327"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d57",
+    "top": [
+      "pmid:17115983",
+      "pmid:14982912",
+      "pmid:16324162",
+      "pmid:19719543",
+      "pmid:14982912"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.7873809837758804,
+    "strict_recall": 1.0,
+    "id": "d58",
+    "top": [
+      "ade:17896898",
+      "pmid:25006684",
+      "pmid:16908788",
+      "ade:17896898",
+      "pmid:22697191"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d59",
+    "top": [
+      "card_mirtazapine",
+      "kg:sider:mirtazapine",
+      "kg:sider:mirtazapine",
+      "kg:drug:mirtazapine",
+      "ade:11918514"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "d60",
+    "top": [
+      "faers:statins:atorvastatin",
+      "faers:statins:simvastatin",
+      "faers:statins:atorvastatin",
+      "faers:statins:simvastatin",
+      "faers:statins:rosuvastatin"
+    ]
+  }
+]

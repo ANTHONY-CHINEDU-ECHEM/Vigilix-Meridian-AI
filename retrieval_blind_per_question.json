@@ -1,0 +1,422 @@
+[
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b01",
+    "top": [
+      "card_statin_myopathy",
+      "faers:statins:atorvastatin",
+      "faers:statins:atorvastatin",
+      "pmid:18261731",
+      "pmid:12534315"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b02",
+    "top": [
+      "card_ror",
+      "card_bcpnn_ic",
+      "faers:statins:atorvastatin",
+      "faers:covid19_fast_track:bebtelovimab",
+      "faers:beta_blockers:bisoprolol"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b03",
+    "top": [
+      "card_sglt2",
+      "label:eu:qtrilmet:864",
+      "pmid:23911260",
+      "pmid:21854192",
+      "pmid:23911260"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9154353048679708,
+    "strict_recall": 1.0,
+    "id": "b04",
+    "top": [
+      "card_qt_torsade",
+      "label:uk:7718:476",
+      "label:uk:7718:476",
+      "kg:sider:escitalopram",
+      "card_ssri_class"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b05",
+    "top": [
+      "card_gi_bleeding",
+      "kg:sider:ibuprofen",
+      "kg:sider:ibuprofen",
+      "kg:drug:ibuprofen",
+      "pmid:7884951"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "ndcg": 0.5,
+    "strict_recall": 1.0,
+    "id": "b06",
+    "top": [
+      "card_prr_evans",
+      "card_ror",
+      "card_bcpnn_ic",
+      "pmid:25236838",
+      "card_ddi_signal_detection"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9196461703481416,
+    "strict_recall": 1.0,
+    "id": "b07",
+    "top": [
+      "faers:beta_blockers:nadolol",
+      "card_duplicates",
+      "faers:beta_blockers:carvedilol",
+      "faers:beta_blockers:metoprolol",
+      "faers:beta_blockers:bisoprolol"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9796808707575757,
+    "strict_recall": 1.0,
+    "id": "b08",
+    "top": [
+      "faers:sedatives:clonazepam",
+      "faers:sedatives:clonazepam",
+      "kg:sider:clonazepam",
+      "card_opioid_benzodiazepine",
+      "kg:sider:clonazepam"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9639404333166532,
+    "strict_recall": 1.0,
+    "id": "b09",
+    "top": [
+      "card_sjs_ten",
+      "card_dress",
+      "kg:sider:allopurinol",
+      "ddi:DDI-DrugBank.d413",
+      "ddi:DDI-DrugBank.d413"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.7422519080014248,
+    "strict_recall": 1.0,
+    "id": "b10",
+    "top": [
+      "kg:sider:ticagrelor",
+      "pmid:22991347",
+      "pmid:23448616",
+      "pmid:24040849",
+      "label:us:brilinta:264"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.7333045279881453,
+    "strict_recall": 0.0,
+    "id": "b11",
+    "top": [
+      "kg:sider:fingolimod",
+      "pmid:22354739",
+      "pmid:20089954",
+      "pmid:20089952",
+      "pmid:20089952"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b12",
+    "top": [
+      "card_isotretinoin",
+      "kg:sider:isotretinoin",
+      "pmid:24918555",
+      "pmid:24918555",
+      "kg:sider:isotretinoin"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b13",
+    "top": [
+      "card_molnupiravir",
+      "faers:covid19_fast_track:molnupiravir",
+      "faers:covid19_fast_track:molnupiravir",
+      "kg:drug:molnupiravir",
+      "card_pregnancy_registries"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b14",
+    "top": [
+      "card_dexmedetomidine",
+      "ddi:DDI-DrugBank.d197",
+      "ddi:DDI-MedLine.d227",
+      "ddi:DDI-MedLine.d227",
+      "pmid:19188334"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b15",
+    "top": [
+      "card_duplicates",
+      "faers:beta_blockers:nadolol",
+      "faers:sedatives:dexmedetomidine",
+      "faers:sedatives:diazepam",
+      "faers:sedatives:lorazepam"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8065735963827292,
+    "strict_recall": 1.0,
+    "id": "b16",
+    "top": [
+      "card_paediatrics",
+      "label:us:6468c79b_ff80_4d93_ad5a_7a63f54b5c70:983",
+      "label:uk:7031:571",
+      "label:uk:7031:571",
+      "pmid:8773860"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.6368856191022971,
+    "strict_recall": 0.0,
+    "id": "b17",
+    "top": [
+      "ddi:DDI-DrugBank.d441",
+      "ddi:DDI-DrugBank.d441",
+      "label:us:aeb6c858_00ed_4a7a_a5a0_dd3536261083:1073",
+      "label:us:936ad52c_acf7_45da_9c28_7cf85e61fcdb:1030",
+      "label:us:44d4fd62_64cd_4e72_b5ed_1f82207dbdb0:945"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b18",
+    "top": [
+      "card_dress",
+      "card_antiepileptic_hypersensitivity",
+      "ade:19122478",
+      "cdr:2522601",
+      "ade:1393348"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b19",
+    "top": [
+      "label:us:xeljanz:455",
+      "label:us:xeljanz:456",
+      "label:us:xeljanz:455",
+      "label:us:xeljanz:457",
+      "label:us:xeljanz:457"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b20",
+    "top": [
+      "card_nephro_ototoxic_antibiotics",
+      "cdr:16298782",
+      "kg:sider:gentamicin",
+      "kg:sider:gentamicin",
+      "cdr:20164825"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b21",
+    "top": [
+      "card_nirmatrelvir_ritonavir",
+      "faers:covid19_fast_track:nirmatrelvir ritonavir",
+      "faers:covid19_fast_track:nirmatrelvir ritonavir",
+      "ddi:DDI-DrugBank.d124",
+      "ddi:DDI-DrugBank.d340"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b22",
+    "top": [
+      "card_nms",
+      "ade:1759924",
+      "ade:11816261",
+      "ade:17195428",
+      "ade:11816261"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b23",
+    "top": [
+      "card_hyperkalaemia",
+      "cdr:20859899",
+      "cdr:15632880",
+      "cdr:15632880",
+      "ade:19281746"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9243382314975351,
+    "strict_recall": 1.0,
+    "id": "b24",
+    "top": [
+      "card_label_sections",
+      "label:uk:13214:566",
+      "label:eu:revlimid:873",
+      "label:uk:10650:613",
+      "label:uk:13214:566"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9197207891481876,
+    "strict_recall": 1.0,
+    "id": "b25",
+    "top": [
+      "card_signal_refinement",
+      "label:eu:spikevax_previously_covid_19_vaccine_moderna_:780",
+      "card_vaccine_surveillance",
+      "pmid:23190777",
+      "label:eu:spikevax_previously_covid_19_vaccine_moderna_:780"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b26",
+    "top": [
+      "card_glp1",
+      "kg:drug:semaglutide",
+      "pmid:17520399",
+      "pmid:9681082",
+      "pmid:19730966"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b27",
+    "top": [
+      "ade:14693027",
+      "ade:14693027",
+      "kg:sider:phenytoin",
+      "kg:sider:phenytoin",
+      "pmid:7673021"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b28",
+    "top": [
+      "card_opioid_benzodiazepine",
+      "label:uk:2362:610",
+      "label:uk:2362:610",
+      "ddi:DDI-DrugBank.d438",
+      "ddi:DDI-DrugBank.d438"
+    ]
+  },
+  {
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "strict_recall": 1.0,
+    "id": "b29",
+    "top": [
+      "pmid:20946161",
+      "pmid:18537952",
+      "pmid:12757058",
+      "pmid:14693299",
+      "pmid:15207837"
+    ]
+  },
+  {
+    "recall": 0.0,
+    "mrr": 0.1111111111111111,
+    "ndcg": 0.3010299956639812,
+    "strict_recall": 0.0,
+    "id": "b30",
+    "top": [
+      "pmid:22890091",
+      "ddi:DDI-MedLine.d78",
+      "pmid:9064058",
+      "pmid:9064058",
+      "pmid:11880065"
+    ]
+  }
+]

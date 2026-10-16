@@ -1,0 +1,77 @@
+{
+  "split": {
+    "train_sentences": 16698,
+    "test_sentences": 4269,
+    "test_positive_sentences": 912,
+    "test_pmids": 594
+  },
+  "sentence_classification": {
+    "precision": 0.695,
+    "recall": 0.724,
+    "f1": 0.709,
+    "auroc": 0.9193
+  },
+  "drug_spans_crf": {
+    "precision": 0.883,
+    "recall": 0.745,
+    "f1": 0.808,
+    "support": 1029
+  },
+  "effect_spans_crf": {
+    "precision": 0.74,
+    "recall": 0.661,
+    "f1": 0.698,
+    "support": 1230
+  },
+  "drug_spans_crf_overlap": {
+    "precision": 0.903,
+    "recall": 0.77,
+    "f1": 0.831,
+    "support": 1029
+  },
+  "effect_spans_crf_overlap": {
+    "precision": 0.883,
+    "recall": 0.794,
+    "f1": 0.836,
+    "support": 1230
+  },
+  "drug_spans_dictionary": {
+    "precision": 0.56,
+    "recall": 0.496,
+    "f1": 0.526,
+    "support": 1029
+  },
+  "effect_spans_dictionary": {
+    "precision": 0.356,
+    "recall": 0.376,
+    "f1": 0.366,
+    "support": 1230
+  },
+  "relations_end_to_end_crf": {
+    "precision": 0.639,
+    "recall": 0.487,
+    "f1": 0.553,
+    "support": 1410
+  },
+  "relations_end_to_end_dictionary": {
+    "precision": 0.181,
+    "recall": 0.17,
+    "f1": 0.175,
+    "support": 1410
+  },
+  "relations_given_gold_entities": {
+    "precision": 0.995,
+    "recall": 1.0,
+    "f1": 0.998,
+    "candidate_pairs": 1417,
+    "majority_baseline_f1": 0.998
+  },
+  "crf_transitions_top": [
+    "I-DRUG -> I-DRUG: 4.61",
+    "I-EFFECT -> I-EFFECT: 3.77",
+    "B-EFFECT -> I-EFFECT: 2.94",
+    "B-DRUG -> I-DRUG: 2.27",
+    "I-EFFECT -> B-DRUG: 1.60",
+    "B-DRUG -> B-EFFECT: 1.10"
+  ]
+}

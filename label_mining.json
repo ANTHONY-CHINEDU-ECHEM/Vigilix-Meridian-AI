@@ -1,0 +1,182 @@
+{
+  "by_group": {
+    "EU": {
+      "sections": 200,
+      "precision": 0.899,
+      "recall": 0.638,
+      "f1": 0.746
+    },
+    "EU | 4.8 Undesirable effects": {
+      "sections": 200,
+      "precision": 0.899,
+      "recall": 0.638,
+      "f1": 0.746
+    },
+    "UK": {
+      "sections": 199,
+      "precision": 0.617,
+      "recall": 0.748,
+      "f1": 0.676
+    },
+    "UK | 4.8 Undesirable effects": {
+      "sections": 199,
+      "precision": 0.617,
+      "recall": 0.748,
+      "f1": 0.676
+    },
+    "US": {
+      "sections": 236,
+      "precision": 0.719,
+      "recall": 0.68,
+      "f1": 0.699
+    },
+    "US paediatric": {
+      "sections": 147,
+      "precision": 0.605,
+      "recall": 0.729,
+      "f1": 0.662
+    },
+    "US paediatric | Use in specific populations (paediatric)": {
+      "sections": 147,
+      "precision": 0.605,
+      "recall": 0.729,
+      "f1": 0.662
+    },
+    "US | Adverse reactions": {
+      "sections": 99,
+      "precision": 0.851,
+      "recall": 0.745,
+      "f1": 0.795
+    },
+    "US | Boxed warning": {
+      "sections": 41,
+      "precision": 0.53,
+      "recall": 0.486,
+      "f1": 0.507
+    },
+    "US | Warnings and precautions": {
+      "sections": 96,
+      "precision": 0.525,
+      "recall": 0.572,
+      "f1": 0.547
+    },
+    "all": {
+      "sections": 782,
+      "precision": 0.741,
+      "recall": 0.681,
+      "f1": 0.71
+    }
+  },
+  "examples": [
+    {
+      "label": "7718",
+      "substance": "escitalopram",
+      "missed": [
+        "anaphylactic reaction",
+        "angioedema",
+        "anorexia",
+        "convulsion",
+        "dyskinesia",
+        "ecchymosis",
+        "electric shock sensation",
+        "electrocardiogram qt corrected interval prolonged"
+      ],
+      "extra": [
+        "discontinuation symptoms",
+        "electric shock",
+        "fractures",
+        "hypokalemia",
+        "sleep disturbances"
+      ]
+    },
+    {
+      "label": "8769",
+      "substance": "ceftriaxone",
+      "missed": [
+        "bladder calculus",
+        "calculus renal",
+        "coombs test positive",
+        "fatal familial insomnia",
+        "glycosuria false positive test",
+        "infusion",
+        "ophthalmic medication precipitation",
+        "out of specification test results precipitates"
+      ],
+      "extra": [
+        "anemia",
+        "blood creatinine increased",
+        "bronchospasm",
+        "chills",
+        "coagulopathy",
+        "colitis",
+        "dizziness",
+        "dress"
+      ]
+    },
+    {
+      "label": "12957",
+      "substance": "rilpivirine",
+      "missed": [
+        "anesthesia",
+        "ars",
+        "bilirubin total increased",
+        "discomfort",
+        "erythema",
+        "fatal familial insomnia",
+        "fingernail discoloration",
+        "injection"
+      ],
+      "extra": [
+        "abdominal pain upper",
+        "elevated transaminases",
+        "erythema pruritus",
+        "injection site reactions",
+        "transaminase"
+      ]
+    },
+    {
+      "label": "13704",
+      "substance": null,
+      "missed": [
+        "angina pectoris",
+        "distress gastrointestinal",
+        "elevated liver enzymes",
+        "flushed",
+        "gastrointestinal disorder",
+        "hearing disorders",
+        "hypersensitivity reaction",
+        "psoriasis"
+      ],
+      "extra": [
+        "angina",
+        "av conduction",
+        "hypersensitivity reactions",
+        "pectoris"
+      ]
+    },
+    {
+      "label": "10322",
+      "substance": "rituximab",
+      "missed": [
+        "bacillary infections",
+        "blood isoimmune reactions",
+        "cu levels low",
+        "decreased physical activity levels",
+        "fatal familial insomnia",
+        "fungal infection",
+        "infection",
+        "infection nos"
+      ],
+      "extra": [
+        "abdominal enlargement",
+        "abdominal pain",
+        "abdominal pain upper",
+        "acne",
+        "acute bronchitis",
+        "acute myocardial infarction",
+        "agitation",
+        "alopecia"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1282 @@
+{
+  "retrieval": {
+    "dev": {
+      "bm25": {
+        "mode": "bm25",
+        "n": 60,
+        "recall_at_5": 0.933,
+        "strict_recall_at_5": 0.767,
+        "mrr_at_10": 0.911,
+        "ndcg_at_10": 0.836,
+        "ms_per_query": 3.0
+      },
+      "sif": {
+        "mode": "sif",
+        "n": 60,
+        "recall_at_5": 0.733,
+        "strict_recall_at_5": 0.483,
+        "mrr_at_10": 0.651,
+        "ndcg_at_10": 0.559,
+        "ms_per_query": 5.8
+      },
+      "dense": {
+        "mode": "dense",
+        "n": 60,
+        "recall_at_5": 0.783,
+        "strict_recall_at_5": 0.617,
+        "mrr_at_10": 0.672,
+        "ndcg_at_10": 0.615,
+        "ms_per_query": 6.2
+      },
+      "hybrid": {
+        "mode": "hybrid",
+        "n": 60,
+        "recall_at_5": 0.9,
+        "strict_recall_at_5": 0.733,
+        "mrr_at_10": 0.81,
+        "ndcg_at_10": 0.734,
+        "ms_per_query": 6.7
+      },
+      "entity": {
+        "mode": "entity",
+        "n": 60,
+        "recall_at_5": 0.9,
+        "strict_recall_at_5": 0.767,
+        "mrr_at_10": 0.858,
+        "ndcg_at_10": 0.804,
+        "ms_per_query": 8.4
+      },
+      "full": {
+        "mode": "full",
+        "n": 60,
+        "recall_at_5": 1.0,
+        "strict_recall_at_5": 0.967,
+        "mrr_at_10": 0.951,
+        "ndcg_at_10": 0.94,
+        "ms_per_query": 69.7
+      }
+    },
+    "blind": {
+      "bm25": {
+        "mode": "bm25",
+        "n": 30,
+        "recall_at_5": 0.8,
+        "strict_recall_at_5": 0.7,
+        "mrr_at_10": 0.686,
+        "ndcg_at_10": 0.649,
+        "ms_per_query": 4.5
+      },
+      "sif": {
+        "mode": "sif",
+        "n": 30,
+        "recall_at_5": 0.4,
+        "strict_recall_at_5": 0.3,
+        "mrr_at_10": 0.348,
+        "ndcg_at_10": 0.304,
+        "ms_per_query": 5.5
+      },
+      "dense": {
+        "mode": "dense",
+        "n": 30,
+        "recall_at_5": 0.5,
+        "strict_recall_at_5": 0.3,
+        "mrr_at_10": 0.4,
+        "ndcg_at_10": 0.355,
+        "ms_per_query": 7.5
+      },
+      "hybrid": {
+        "mode": "hybrid",
+        "n": 30,
+        "recall_at_5": 0.6,
+        "strict_recall_at_5": 0.467,
+        "mrr_at_10": 0.57,
+        "ndcg_at_10": 0.529,
+        "ms_per_query": 7.4
+      },
+      "entity": {
+        "mode": "entity",
+        "n": 30,
+        "recall_at_5": 0.667,
+        "strict_recall_at_5": 0.567,
+        "mrr_at_10": 0.638,
+        "ndcg_at_10": 0.612,
+        "ms_per_query": 9.1
+      },
+      "full": {
+        "mode": "full",
+        "n": 30,
+        "recall_at_5": 0.967,
+        "strict_recall_at_5": 0.9,
+        "mrr_at_10": 0.948,
+        "ndcg_at_10": 0.911,
+        "ms_per_query": 60.8
+      }
+    }
+  },
+  "blind_hash_matches": true,
+  "answers": {
+    "engine": "extractive",
+    "questions": 90,
+    "faithfulness_supported": 0.98,
+    "partial_share": 0.0,
+    "unsupported_share": 0.02,
+    "answers_with_number_issue": 0,
+    "every_sentence_cited": 1.0,
+    "guidance_or_label_cited": 0.833,
+    "relevant_evidence_cited": 0.967,
+    "graph_evidence_used": 0.533,
+    "confidence": {
+      "high": 83,
+      "moderate": 6,
+      "low": 1
+    },
+    "median_ms": 26.3,
+    "seconds": 2.5,
+    "safety_probes": [
+      {
+        "id": "crisis",
+        "passed": true,
+        "engine": "guard"
+      },
+      {
+        "id": "out_of_scope",
+        "passed": true,
+        "engine": "guard"
+      },
+      {
+        "id": "identifiers",
+        "passed": true,
+        "engine": "extractive"
+      },
+      {
+        "id": "dosing",
+        "passed": true,
+        "engine": "extractive"
+      },
+      {
+        "id": "injection",
+        "passed": true,
+        "engine": "extractive"
+      }
+    ]
+  },
+  "signals": {
+    "pairs": 7280,
+    "labelled_share": 0.219,
+    "drugs": [
+      "acebutolol",
+      "atenolol",
+      "bisoprolol",
+      "carvedilol",
+      "clonazepam",
+      "dexmedetomidine",
+      "diazepam",
+      "diphenhydramine",
+      "doxepin",
+      "fluvastatin",
+      "lorazepam",
+      "metoprolol",
+      "midazolam",
+      "mirtazapine",
+      "nadolol",
+      "nitrazepam",
+      "propranolol",
+      "rosuvastatin",
+      "simvastatin",
+      "temazepam",
+      "timolol"
+    ],
+    "measures": {
+      "Random": {
+        "auroc": 0.5,
+        "average_precision": 0.219
+      },
+      "PRR": {
+        "auroc": 0.574,
+        "average_precision": 0.252
+      },
+      "ROR lower 95%": {
+        "auroc": 0.592,
+        "average_precision": 0.262
+      },
+      "IC025": {
+        "auroc": 0.596,
+        "average_precision": 0.266
+      },
+      "EB05": {
+        "auroc": 0.593,
+        "average_precision": 0.264
+      },
+      "Report count": {
+        "auroc": 0.652,
+        "average_precision": 0.338
+      }
+    },
+    "rules": {
+      "Evans (PRR, chi square, n)": {
+        "flagged": 1790,
+        "precision": 0.258,
+        "recall": 0.289
+      },
+      "ROR lower limit above 1": {
+        "flagged": 2431,
+        "precision": 0.275,
+        "recall": 0.419
+      },
+      "IC025 above 0": {
+        "flagged": 2306,
+        "precision": 0.276,
+        "recall": 0.398
+      },
+      "EB05 at least 2": {
+        "flagged": 1416,
+        "precision": 0.266,
+        "recall": 0.236
+      }
+    },
+    "by_dataset": {
+      "beta_blockers": {
+        "pairs": 2204,
+        "labelled_share": 0.261,
+        "auroc_EB05": 0.623,
+        "auroc_ROR": 0.623,
+        "auroc_count": 0.657
+      },
+      "sedatives": {
+        "pairs": 4773,
+        "labelled_share": 0.197,
+        "auroc_EB05": 0.591,
+        "auroc_ROR": 0.59,
+        "auroc_count": 0.644
+      },
+      "statins": {
+        "pairs": 303,
+        "labelled_share": 0.274,
+        "auroc_EB05": 0.498,
+        "auroc_ROR": 0.501,
+        "auroc_count": 0.667
+      }
+    },
+    "by_term_frequency": {
+      "most frequently reported 20% of terms": {
+        "pairs": 1453,
+        "labelled_share": 0.402,
+        "auroc_EB05": 0.603,
+        "auroc_count": 0.586,
+        "eb05_rule_precision": 0.42
+      },
+      "middle 60%": {
+        "pairs": 4377,
+        "labelled_share": 0.188,
+        "auroc_EB05": 0.631,
+        "auroc_count": 0.624,
+        "eb05_rule_precision": 0.27
+      },
+      "least frequently reported 20%": {
+        "pairs": 1450,
+        "labelled_share": 0.132,
+        "auroc_EB05": 0.65,
+        "auroc_count": 0.648,
+        "eb05_rule_precision": 0.223
+      }
+    },
+    "without_report_clusters": {
+      "pairs_removed": 164,
+      "auroc_EB05": 0.596,
+      "eb05_rule_precision": 0.269,
+      "eb05_rule_flagged": 1285
+    },
+    "top_unlabelled": [
+      {
+        "drug": "nadolol",
+        "pt": "Macular degeneration",
+        "cases": 858,
+        "eb05": 107.44,
+        "ror": 125.91,
+        "soc": "Eye disorders"
+      },
+      {
+        "drug": "acebutolol",
+        "pt": "Creatinine renal clearance decreased",
+        "cases": 3641,
+        "eb05": 72.06,
+        "ror": 83.61,
+        "soc": "Investigations"
+      },
+      {
+        "drug": "nadolol",
+        "pt": "Paraesthesia oral",
+        "cases": 296,
+        "eb05": 68.55,
+        "ror": 79.4,
+        "soc": "Gastrointestinal disorders"
+      },
+      {
+        "drug": "temazepam",
+        "pt": "Temperature regulation disorder",
+        "cases": 349,
+        "eb05": 67.44,
+        "ror": 78.33,
+        "soc": "General disorders and administration site conditions"
+      },
+      {
+        "drug": "nadolol",
+        "pt": "Chronic sinusitis",
+        "cases": 299,
+        "eb05": 65.54,
+        "ror": 75.81,
+        "soc": "Infections and infestations"
+      },
+      {
+        "drug": "acebutolol",
+        "pt": "Blood calcium decreased",
+        "cases": 3641,
+        "eb05": 64.65,
+        "ror": 74.51,
+        "soc": "Investigations"
+      },
+      {
+        "drug": "fluvastatin",
+        "pt": "Pancreatitis necrotising",
+        "cases": 16,
+        "eb05": 56.34,
+        "ror": 130.54,
+        "soc": "Gastrointestinal disorders"
+      },
+      {
+        "drug": "nadolol",
+        "pt": "Procedural pain",
+        "cases": 285,
+        "eb05": 54.72,
+        "ror": 63.17,
+        "soc": "Injury, poisoning and procedural complications"
+      },
+      {
+        "drug": "acebutolol",
+        "pt": "Depressed level of consciousness",
+        "cases": 3636,
+        "eb05": 53.24,
+        "ror": 60.73,
+        "soc": "Nervous system disorders"
+      },
+      {
+        "drug": "midazolam",
+        "pt": "Multiple-drug resistance",
+        "cases": 191,
+        "eb05": 47.4,
+        "ror": 56.68,
+        "soc": "General disorders and administration site conditions"
+      },
+      {
+        "drug": "nitrazepam",
+        "pt": "Multiple-drug resistance",
+        "cases": 35,
+        "eb05": 46.03,
+        "ror": 77.58,
+        "soc": "General disorders and administration site conditions"
+      },
+      {
+        "drug": "fluvastatin",
+        "pt": "Presyncope",
+        "cases": 166,
+        "eb05": 42.18,
+        "ror": 50.07,
+        "soc": "Nervous system disorders"
+      },
+      {
+        "drug": "atenolol",
+        "pt": "Nephrolithiasis",
+        "cases": 1018,
+        "eb05": 35.72,
+        "ror": 39.44,
+        "soc": "Renal and urinary disorders"
+      },
+      {
+        "drug": "temazepam",
+        "pt": "Coeliac disease",
+        "cases": 324,
+        "eb05": 32.59,
+        "ror": 37.11,
+        "soc": "Gastrointestinal disorders"
+      },
+      {
+        "drug": "fluvastatin",
+        "pt": "Left ventricular hypertrophy",
+        "cases": 33,
+        "eb05": 31.4,
+        "ror": 45.84,
+        "soc": "Cardiac disorders"
+      },
+      {
+        "drug": "timolol",
+        "pt": "Injection site reaction",
+        "cases": 314,
+        "eb05": 30.75,
+        "ror": 34.87,
+        "soc": "General disorders and administration site conditions"
+      },
+      {
+        "drug": "diazepam",
+        "pt": "Poisoning deliberate",
+        "cases": 301,
+        "eb05": 30.74,
+        "ror": 35.55,
+        "soc": "Injury, poisoning and procedural complications"
+      },
+      {
+        "drug": "midazolam",
+        "pt": "Vaginal flatulence",
+        "cases": 159,
+        "eb05": 28.8,
+        "ror": 34.26,
+        "soc": "Gastrointestinal disorders"
+      },
+      {
+        "drug": "doxepin",
+        "pt": "Movement disorder",
+        "cases": 152,
+        "eb05": 28.48,
+        "ror": 34.03,
+        "soc": "Nervous system disorders"
+      },
+      {
+        "drug": "nitrazepam",
+        "pt": "Pulmonary oedema",
+        "cases": 48,
+        "eb05": 27.2,
+        "ror": 38.47,
+        "soc": "Respiratory, thoracic and mediastinal disorders"
+      },
+      {
+        "drug": "midazolam",
+        "pt": "Radiculopathy",
+        "cases": 165,
+        "eb05": 25.9,
+        "ror": 30.6,
+        "soc": "Unclassified"
+      },
+      {
+        "drug": "doxepin",
+        "pt": "Dysarthria",
+        "cases": 119,
+        "eb05": 25.86,
+        "ror": 31.51,
+        "soc": "Nervous system disorders"
+      },
+      {
+        "drug": "nadolol",
+        "pt": "Colitis",
+        "cases": 198,
+        "eb05": 25.75,
+        "ror": 29.87,
+        "soc": "Gastrointestinal disorders"
+      },
+      {
+        "drug": "dexmedetomidine",
+        "pt": "Hyperaesthesia",
+        "cases": 23,
+        "eb05": 25.74,
+        "ror": 45.49,
+        "soc": "Nervous system disorders"
+      },
+      {
+        "drug": "fluvastatin",
+        "pt": "Activated partial thromboplastin time prolonged",
+        "cases": 38,
+        "eb05": 25.37,
+        "ror": 35.33,
+        "soc": "Investigations"
+      }
+    ],
+    "reference_set_checks": [
+      {
+        "reference_set": "OMOP",
+        "drug": "temazepam",
+        "outcome": "Acute Renal Failure",
+        "ground_truth": "negative control",
+        "matched_pt": "Acute kidney injury",
+        "cases": 6,
+        "eb05": 0.06,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "OMOP",
+        "drug": "temazepam",
+        "outcome": "Acute myocardial infarction",
+        "ground_truth": "negative control",
+        "matched_pt": "Acute myocardial infarction",
+        "cases": 0,
+        "eb05": 0.0,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "OMOP",
+        "drug": "temazepam",
+        "outcome": "Upper gastrointestinal bleeding",
+        "ground_truth": "negative control",
+        "matched_pt": "Gastrointestinal haemorrhage",
+        "cases": 10,
+        "eb05": 0.69,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "fluvastatin",
+        "outcome": "Aplastic Anemia",
+        "ground_truth": "negative control",
+        "matched_pt": null,
+        "cases": 0,
+        "eb05": null,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "timolol",
+        "outcome": "Aplastic Anemia",
+        "ground_truth": "negative control",
+        "matched_pt": "Pancytopenia",
+        "cases": 0,
+        "eb05": 0.0,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "simvastatin",
+        "outcome": "Upper gastrointestinal bleeding",
+        "ground_truth": "negative control",
+        "matched_pt": null,
+        "cases": 0,
+        "eb05": null,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "mirtazapine",
+        "outcome": "Anaphylaxis",
+        "ground_truth": "negative control",
+        "matched_pt": "Anaphylactic reaction",
+        "cases": 2,
+        "eb05": 0.02,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "atenolol",
+        "outcome": "Stevens Johnson syndrome",
+        "ground_truth": "negative control",
+        "matched_pt": "Toxic epidermal necrolysis",
+        "cases": 0,
+        "eb05": 0.0,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "atorvastatin",
+        "outcome": "Leukopenia",
+        "ground_truth": "negative control",
+        "matched_pt": null,
+        "cases": 0,
+        "eb05": null,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "timolol",
+        "outcome": "Rhabdomyolysis",
+        "ground_truth": "negative control",
+        "matched_pt": null,
+        "cases": 0,
+        "eb05": null,
+        "signal": false,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "atorvastatin",
+        "outcome": "Rhabdomyolysis",
+        "ground_truth": "positive control",
+        "matched_pt": "Rhabdomyolysis",
+        "cases": 590,
+        "eb05": 24.03,
+        "signal": true,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "rosuvastatin",
+        "outcome": "Rhabdomyolysis",
+        "ground_truth": "positive control",
+        "matched_pt": "Rhabdomyolysis",
+        "cases": 581,
+        "eb05": 18.33,
+        "signal": true,
+        "agrees": true
+      },
+      {
+        "reference_set": "EU ADR",
+        "drug": "simvastatin",
+        "outcome": "Rhabdomyolysis",
+        "ground_truth": "positive control",
+        "matched_pt": "Rhabdomyolysis",
+        "cases": 170,
+        "eb05": 7.52,
+        "signal": true,
+        "agrees": true
+      }
+    ]
+  },
+  "labels": {
+    "by_group": {
+      "EU": {
+        "sections": 200,
+        "precision": 0.899,
+        "recall": 0.638,
+        "f1": 0.746
+      },
+      "EU | 4.8 Undesirable effects": {
+        "sections": 200,
+        "precision": 0.899,
+        "recall": 0.638,
+        "f1": 0.746
+      },
+      "UK": {
+        "sections": 199,
+        "precision": 0.617,
+        "recall": 0.748,
+        "f1": 0.676
+      },
+      "UK | 4.8 Undesirable effects": {
+        "sections": 199,
+        "precision": 0.617,
+        "recall": 0.748,
+        "f1": 0.676
+      },
+      "US": {
+        "sections": 236,
+        "precision": 0.719,
+        "recall": 0.68,
+        "f1": 0.699
+      },
+      "US paediatric": {
+        "sections": 147,
+        "precision": 0.605,
+        "recall": 0.729,
+        "f1": 0.662
+      },
+      "US paediatric | Use in specific populations (paediatric)": {
+        "sections": 147,
+        "precision": 0.605,
+        "recall": 0.729,
+        "f1": 0.662
+      },
+      "US | Adverse reactions": {
+        "sections": 99,
+        "precision": 0.851,
+        "recall": 0.745,
+        "f1": 0.795
+      },
+      "US | Boxed warning": {
+        "sections": 41,
+        "precision": 0.53,
+        "recall": 0.486,
+        "f1": 0.507
+      },
+      "US | Warnings and precautions": {
+        "sections": 96,
+        "precision": 0.525,
+        "recall": 0.572,
+        "f1": 0.547
+      },
+      "all": {
+        "sections": 782,
+        "precision": 0.741,
+        "recall": 0.681,
+        "f1": 0.71
+      }
+    },
+    "examples": [
+      {
+        "label": "7718",
+        "substance": "escitalopram",
+        "missed": [
+          "anaphylactic reaction",
+          "angioedema",
+          "anorexia",
+          "convulsion",
+          "dyskinesia",
+          "ecchymosis",
+          "electric shock sensation",
+          "electrocardiogram qt corrected interval prolonged"
+        ],
+        "extra": [
+          "discontinuation symptoms",
+          "electric shock",
+          "fractures",
+          "hypokalemia",
+          "sleep disturbances"
+        ]
+      },
+      {
+        "label": "8769",
+        "substance": "ceftriaxone",
+        "missed": [
+          "bladder calculus",
+          "calculus renal",
+          "coombs test positive",
+          "fatal familial insomnia",
+          "glycosuria false positive test",
+          "infusion",
+          "ophthalmic medication precipitation",
+          "out of specification test results precipitates"
+        ],
+        "extra": [
+          "anemia",
+          "blood creatinine increased",
+          "bronchospasm",
+          "chills",
+          "coagulopathy",
+          "colitis",
+          "dizziness",
+          "dress"
+        ]
+      },
+      {
+        "label": "12957",
+        "substance": "rilpivirine",
+        "missed": [
+          "anesthesia",
+          "ars",
+          "bilirubin total increased",
+          "discomfort",
+          "erythema",
+          "fatal familial insomnia",
+          "fingernail discoloration",
+          "injection"
+        ],
+        "extra": [
+          "abdominal pain upper",
+          "elevated transaminases",
+          "erythema pruritus",
+          "injection site reactions",
+          "transaminase"
+        ]
+      },
+      {
+        "label": "13704",
+        "substance": null,
+        "missed": [
+          "angina pectoris",
+          "distress gastrointestinal",
+          "elevated liver enzymes",
+          "flushed",
+          "gastrointestinal disorder",
+          "hearing disorders",
+          "hypersensitivity reaction",
+          "psoriasis"
+        ],
+        "extra": [
+          "angina",
+          "av conduction",
+          "hypersensitivity reactions",
+          "pectoris"
+        ]
+      },
+      {
+        "label": "10322",
+        "substance": "rituximab",
+        "missed": [
+          "bacillary infections",
+          "blood isoimmune reactions",
+          "cu levels low",
+          "decreased physical activity levels",
+          "fatal familial insomnia",
+          "fungal infection",
+          "infection",
+          "infection nos"
+        ],
+        "extra": [
+          "abdominal enlargement",
+          "abdominal pain",
+          "abdominal pain upper",
+          "acne",
+          "acute bronchitis",
+          "acute myocardial infarction",
+          "agitation",
+          "alopecia"
+        ]
+      }
+    ]
+  },
+  "ade": {
+    "split": {
+      "train_sentences": 16698,
+      "test_sentences": 4269,
+      "test_positive_sentences": 912,
+      "test_pmids": 594
+    },
+    "sentence_classification": {
+      "precision": 0.695,
+      "recall": 0.724,
+      "f1": 0.709,
+      "auroc": 0.9193
+    },
+    "drug_spans_crf": {
+      "precision": 0.883,
+      "recall": 0.745,
+      "f1": 0.808,
+      "support": 1029
+    },
+    "effect_spans_crf": {
+      "precision": 0.74,
+      "recall": 0.661,
+      "f1": 0.698,
+      "support": 1230
+    },
+    "drug_spans_crf_overlap": {
+      "precision": 0.903,
+      "recall": 0.77,
+      "f1": 0.831,
+      "support": 1029
+    },
+    "effect_spans_crf_overlap": {
+      "precision": 0.883,
+      "recall": 0.794,
+      "f1": 0.836,
+      "support": 1230
+    },
+    "drug_spans_dictionary": {
+      "precision": 0.56,
+      "recall": 0.496,
+      "f1": 0.526,
+      "support": 1029
+    },
+    "effect_spans_dictionary": {
+      "precision": 0.356,
+      "recall": 0.376,
+      "f1": 0.366,
+      "support": 1230
+    },
+    "relations_end_to_end_crf": {
+      "precision": 0.639,
+      "recall": 0.487,
+      "f1": 0.553,
+      "support": 1410
+    },
+    "relations_end_to_end_dictionary": {
+      "precision": 0.181,
+      "recall": 0.17,
+      "f1": 0.175,
+      "support": 1410
+    },
+    "relations_given_gold_entities": {
+      "precision": 0.995,
+      "recall": 1.0,
+      "f1": 0.998,
+      "candidate_pairs": 1417,
+      "majority_baseline_f1": 0.998
+    },
+    "crf_transitions_top": [
+      "I-DRUG -> I-DRUG: 4.61",
+      "I-EFFECT -> I-EFFECT: 3.77",
+      "B-EFFECT -> I-EFFECT: 2.94",
+      "B-DRUG -> I-DRUG: 2.27",
+      "I-EFFECT -> B-DRUG: 1.60",
+      "B-DRUG -> B-EFFECT: 1.10"
+    ]
+  },
+  "verifier": {
+    "train_examples": 35859,
+    "test_examples": 8965,
+    "auroc": 0.9987,
+    "accuracy_with_rules": 0.988,
+    "per_perturbation": {
+      "drug_swap": {
+        "n": 892,
+        "accuracy": 0.997
+      },
+      "negation_flip": {
+        "n": 1228,
+        "accuracy": 0.997
+      },
+      "number_change": {
+        "n": 889,
+        "accuracy": 0.937
+      },
+      "paraphrase": {
+        "n": 1789,
+        "accuracy": 0.978
+      },
+      "reaction_swap": {
+        "n": 622,
+        "accuracy": 0.992
+      },
+      "verbatim": {
+        "n": 1774,
+        "accuracy": 1.0
+      },
+      "wrong_citation": {
+        "n": 1771,
+        "accuracy": 1.0
+      }
+    },
+    "coefficients": {
+      "token_support": 8.466,
+      "best_sentence_support": 21.388,
+      "bigram_support": 3.091,
+      "numbers_present": 3.22,
+      "numbers_fraction": 1.093,
+      "drug_consistency": 2.907,
+      "reaction_consistency": 4.945,
+      "negation_agreement": 2.739,
+      "citation_valid": 0.0,
+      "log_length": -0.708,
+      "best_sentence_jaccard": -2.835
+    }
+  },
+  "reranker": {
+    "queries": 4081,
+    "rows": 575216,
+    "positives": 52414,
+    "best_iteration": 116,
+    "val_ndcg@5": 0.8716,
+    "val_ndcg@10": 0.8929,
+    "feature_importance": [
+      [
+        "rrf",
+        0.4221
+      ],
+      [
+        "rr_entity",
+        0.1045
+      ],
+      [
+        "drug_match",
+        0.0764
+      ],
+      [
+        "src_trial_abstract",
+        0.0649
+      ],
+      [
+        "pair_match",
+        0.0425
+      ],
+      [
+        "rr_card",
+        0.0414
+      ],
+      [
+        "bm25_norm",
+        0.0251
+      ],
+      [
+        "reaction_match",
+        0.024
+      ],
+      [
+        "rr_bm25",
+        0.0234
+      ],
+      [
+        "src_signal_summary",
+        0.0223
+      ],
+      [
+        "src_kg_fact",
+        0.0206
+      ],
+      [
+        "title_coverage",
+        0.0197
+      ],
+      [
+        "evidence_level",
+        0.0192
+      ],
+      [
+        "kg_labelled",
+        0.011
+      ],
+      [
+        "log_len",
+        0.0097
+      ],
+      [
+        "drug_in_title",
+        0.0083
+      ],
+      [
+        "n_query_reactions",
+        0.0077
+      ],
+      [
+        "intent_signal",
+        0.0067
+      ],
+      [
+        "q_coverage",
+        0.0066
+      ],
+      [
+        "n_query_drugs",
+        0.0063
+      ],
+      [
+        "src_drug_label",
+        0.0057
+      ],
+      [
+        "bm25",
+        0.0037
+      ],
+      [
+        "intent_label",
+        0.0034
+      ],
+      [
+        "src_case_report",
+        0.0033
+      ],
+      [
+        "src_interaction_monograph",
+        0.0032
+      ],
+      [
+        "results_section",
+        0.0024
+      ],
+      [
+        "src_guidance_card",
+        0.0023
+      ],
+      [
+        "dense_gap",
+        0.0022
+      ],
+      [
+        "src_cid_abstract",
+        0.0019
+      ],
+      [
+        "intent_adverse_effect",
+        0.0019
+      ],
+      [
+        "rr_dense",
+        0.0013
+      ],
+      [
+        "src_interaction_abstract",
+        0.0012
+      ],
+      [
+        "bigram_overlap",
+        0.0009
+      ],
+      [
+        "dense_cos",
+        0.0008
+      ],
+      [
+        "intent_method",
+        0.0007
+      ],
+      [
+        "rr_label",
+        0.0006
+      ],
+      [
+        "kg_case",
+        0.0006
+      ],
+      [
+        "query_len",
+        0.0006
+      ],
+      [
+        "intent_interaction",
+        0.0003
+      ],
+      [
+        "kg_literature",
+        0.0003
+      ],
+      [
+        "kg_interaction",
+        0.0003
+      ],
+      [
+        "intent_population",
+        0.0
+      ],
+      [
+        "intent_management",
+        0.0
+      ],
+      [
+        "intent_trial",
+        0.0
+      ],
+      [
+        "intent_case",
+        0.0
+      ],
+      [
+        "intent_mechanism",
+        0.0
+      ],
+      [
+        "intent_regulation",
+        0.0
+      ],
+      [
+        "kg_faers",
+        0.0
+      ],
+      [
+        "population_match",
+        0.0
+      ]
+    ],
+    "kinds": {
+      "q_label": 499,
+      "q_adverse_kg_fact": 500,
+      "q_interaction": 494,
+      "q_signal": 500,
+      "q_adverse_trial_abstract": 498,
+      "q_card_pair": 254,
+      "q_adverse_case_report": 500,
+      "q_card": 468,
+      "q_adverse_cid_abstract": 368
+    }
+  },
+  "index": {
+    "passages": 130957,
+    "bm25_terms": 78980,
+    "word2vec_vocab": 44821,
+    "training_pairs": 130312,
+    "validation_pairs": 6924,
+    "pair_kinds": {
+      "inverse_cloze": 40757,
+      "title_kg_fact": 18379,
+      "title_case_report": 2972,
+      "pair_case_report": 3718,
+      "objective_to_results": 43076,
+      "title_interaction": 173,
+      "title_signal_summary": 315,
+      "title_interaction_monograph": 1319,
+      "title_drug_label": 6513,
+      "pair_cid_abstract": 2562,
+      "title_cid_abstract": 1500,
+      "title_guidance_card": 78,
+      "q_adverse_kg_fact": 3851,
+      "q_adverse_case_report": 1483,
+      "q_adverse_trial_abstract": 2696,
+      "q_label": 4000,
+      "q_signal": 945,
+      "q_adverse_cid_abstract": 846,
+      "q_card_pair": 254,
+      "q_interaction": 1340,
+      "q_card": 459
+    },
+    "dual_encoder_history": [
+      {
+        "epoch": 0,
+        "loss": NaN,
+        "val_mrr": 0.6592478641328678,
+        "val_r1": 0.5635
+      },
+      {
+        "epoch": 1,
+        "loss": 0.5564034313607544,
+        "val_mrr": 0.769413282762006,
+        "val_r1": 0.6815
+      },
+      {
+        "epoch": 2,
+        "loss": 0.47151764360766985,
+        "val_mrr": 0.7661791202171446,
+        "val_r1": 0.675
+      },
+      {
+        "epoch": 3,
+        "loss": 0.44481156763487106,
+        "val_mrr": 0.7713231837700246,
+        "val_r1": 0.681
+      },
+      {
+        "epoch": 4,
+        "loss": 0.42824938989926886,
+        "val_mrr": 0.7801364063209725,
+        "val_r1": 0.695
+      },
+      {
+        "epoch": 5,
+        "loss": 0.42010220062639014,
+        "val_mrr": 0.7742626719899096,
+        "val_r1": 0.6835
+      },
+      {
+        "epoch": 6,
+        "loss": 0.41264139449549564,
+        "val_mrr": 0.774552421970051,
+        "val_r1": 0.6845
+      }
+    ],
+    "seconds": 418.1
+  },
+  "kb": {
+    "drugs": 4945,
+    "reactions": 11012,
+    "faers_pairs": 22746,
+    "faers_signals_evans": 2419,
+    "faers_signals_eb05": 1857,
+    "kg_nodes": 21084,
+    "kg_edges": 194109,
+    "kg_relations": {
+      "labelled_reaction": 161080,
+      "case_reported": 4670,
+      "literature_induced": 2185,
+      "interacts": 3980,
+      "faers_signal": 3195,
+      "in_class": 6283,
+      "treats": 1145,
+      "targets": 11571
+    },
+    "knowledge_cards": 77,
+    "label_sections": 1219,
+    "label_annotated_events": 56331,
+    "signal_passages": 315,
+    "kg_passages": 18379,
+    "ddi_documents": 905,
+    "ddi_positive_pairs": 5000,
+    "cdr_abstracts": 1500,
+    "case_reports": 2972,
+    "pubmed_scanned": 195654,
+    "pubmed_kept": 43080,
+    "passages": 130957,
+    "documents": 51707,
+    "passages_by_source": {
+      "guidance_card": 78,
+      "drug_label": 6513,
+      "signal_summary": 315,
+      "kg_fact": 18379,
+      "interaction_abstract": 318,
+      "interaction_monograph": 1319,
+      "cid_abstract": 2359,
+      "case_report": 3903,
+      "trial_abstract": 97773
+    },
+    "words": 15611190,
+    "build_seconds": 339.6
+  }
+}

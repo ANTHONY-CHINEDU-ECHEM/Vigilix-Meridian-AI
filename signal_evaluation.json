@@ -1,0 +1,474 @@
+{
+  "pairs": 7280,
+  "labelled_share": 0.219,
+  "drugs": [
+    "acebutolol",
+    "atenolol",
+    "bisoprolol",
+    "carvedilol",
+    "clonazepam",
+    "dexmedetomidine",
+    "diazepam",
+    "diphenhydramine",
+    "doxepin",
+    "fluvastatin",
+    "lorazepam",
+    "metoprolol",
+    "midazolam",
+    "mirtazapine",
+    "nadolol",
+    "nitrazepam",
+    "propranolol",
+    "rosuvastatin",
+    "simvastatin",
+    "temazepam",
+    "timolol"
+  ],
+  "measures": {
+    "Random": {
+      "auroc": 0.5,
+      "average_precision": 0.219
+    },
+    "PRR": {
+      "auroc": 0.574,
+      "average_precision": 0.252
+    },
+    "ROR lower 95%": {
+      "auroc": 0.592,
+      "average_precision": 0.262
+    },
+    "IC025": {
+      "auroc": 0.596,
+      "average_precision": 0.266
+    },
+    "EB05": {
+      "auroc": 0.593,
+      "average_precision": 0.264
+    },
+    "Report count": {
+      "auroc": 0.652,
+      "average_precision": 0.338
+    }
+  },
+  "rules": {
+    "Evans (PRR, chi square, n)": {
+      "flagged": 1790,
+      "precision": 0.258,
+      "recall": 0.289
+    },
+    "ROR lower limit above 1": {
+      "flagged": 2431,
+      "precision": 0.275,
+      "recall": 0.419
+    },
+    "IC025 above 0": {
+      "flagged": 2306,
+      "precision": 0.276,
+      "recall": 0.398
+    },
+    "EB05 at least 2": {
+      "flagged": 1416,
+      "precision": 0.266,
+      "recall": 0.236
+    }
+  },
+  "by_dataset": {
+    "beta_blockers": {
+      "pairs": 2204,
+      "labelled_share": 0.261,
+      "auroc_EB05": 0.623,
+      "auroc_ROR": 0.623,
+      "auroc_count": 0.657
+    },
+    "sedatives": {
+      "pairs": 4773,
+      "labelled_share": 0.197,
+      "auroc_EB05": 0.591,
+      "auroc_ROR": 0.59,
+      "auroc_count": 0.644
+    },
+    "statins": {
+      "pairs": 303,
+      "labelled_share": 0.274,
+      "auroc_EB05": 0.498,
+      "auroc_ROR": 0.501,
+      "auroc_count": 0.667
+    }
+  },
+  "by_term_frequency": {
+    "most frequently reported 20% of terms": {
+      "pairs": 1453,
+      "labelled_share": 0.402,
+      "auroc_EB05": 0.603,
+      "auroc_count": 0.586,
+      "eb05_rule_precision": 0.42
+    },
+    "middle 60%": {
+      "pairs": 4377,
+      "labelled_share": 0.188,
+      "auroc_EB05": 0.631,
+      "auroc_count": 0.624,
+      "eb05_rule_precision": 0.27
+    },
+    "least frequently reported 20%": {
+      "pairs": 1450,
+      "labelled_share": 0.132,
+      "auroc_EB05": 0.65,
+      "auroc_count": 0.648,
+      "eb05_rule_precision": 0.223
+    }
+  },
+  "without_report_clusters": {
+    "pairs_removed": 164,
+    "auroc_EB05": 0.596,
+    "eb05_rule_precision": 0.269,
+    "eb05_rule_flagged": 1285
+  },
+  "top_unlabelled": [
+    {
+      "drug": "nadolol",
+      "pt": "Macular degeneration",
+      "cases": 858,
+      "eb05": 107.44,
+      "ror": 125.91,
+      "soc": "Eye disorders"
+    },
+    {
+      "drug": "acebutolol",
+      "pt": "Creatinine renal clearance decreased",
+      "cases": 3641,
+      "eb05": 72.06,
+      "ror": 83.61,
+      "soc": "Investigations"
+    },
+    {
+      "drug": "nadolol",
+      "pt": "Paraesthesia oral",
+      "cases": 296,
+      "eb05": 68.55,
+      "ror": 79.4,
+      "soc": "Gastrointestinal disorders"
+    },
+    {
+      "drug": "temazepam",
+      "pt": "Temperature regulation disorder",
+      "cases": 349,
+      "eb05": 67.44,
+      "ror": 78.33,
+      "soc": "General disorders and administration site conditions"
+    },
+    {
+      "drug": "nadolol",
+      "pt": "Chronic sinusitis",
+      "cases": 299,
+      "eb05": 65.54,
+      "ror": 75.81,
+      "soc": "Infections and infestations"
+    },
+    {
+      "drug": "acebutolol",
+      "pt": "Blood calcium decreased",
+      "cases": 3641,
+      "eb05": 64.65,
+      "ror": 74.51,
+      "soc": "Investigations"
+    },
+    {
+      "drug": "fluvastatin",
+      "pt": "Pancreatitis necrotising",
+      "cases": 16,
+      "eb05": 56.34,
+      "ror": 130.54,
+      "soc": "Gastrointestinal disorders"
+    },
+    {
+      "drug": "nadolol",
+      "pt": "Procedural pain",
+      "cases": 285,
+      "eb05": 54.72,
+      "ror": 63.17,
+      "soc": "Injury, poisoning and procedural complications"
+    },
+    {
+      "drug": "acebutolol",
+      "pt": "Depressed level of consciousness",
+      "cases": 3636,
+      "eb05": 53.24,
+      "ror": 60.73,
+      "soc": "Nervous system disorders"
+    },
+    {
+      "drug": "midazolam",
+      "pt": "Multiple-drug resistance",
+      "cases": 191,
+      "eb05": 47.4,
+      "ror": 56.68,
+      "soc": "General disorders and administration site conditions"
+    },
+    {
+      "drug": "nitrazepam",
+      "pt": "Multiple-drug resistance",
+      "cases": 35,
+      "eb05": 46.03,
+      "ror": 77.58,
+      "soc": "General disorders and administration site conditions"
+    },
+    {
+      "drug": "fluvastatin",
+      "pt": "Presyncope",
+      "cases": 166,
+      "eb05": 42.18,
+      "ror": 50.07,
+      "soc": "Nervous system disorders"
+    },
+    {
+      "drug": "atenolol",
+      "pt": "Nephrolithiasis",
+      "cases": 1018,
+      "eb05": 35.72,
+      "ror": 39.44,
+      "soc": "Renal and urinary disorders"
+    },
+    {
+      "drug": "temazepam",
+      "pt": "Coeliac disease",
+      "cases": 324,
+      "eb05": 32.59,
+      "ror": 37.11,
+      "soc": "Gastrointestinal disorders"
+    },
+    {
+      "drug": "fluvastatin",
+      "pt": "Left ventricular hypertrophy",
+      "cases": 33,
+      "eb05": 31.4,
+      "ror": 45.84,
+      "soc": "Cardiac disorders"
+    },
+    {
+      "drug": "timolol",
+      "pt": "Injection site reaction",
+      "cases": 314,
+      "eb05": 30.75,
+      "ror": 34.87,
+      "soc": "General disorders and administration site conditions"
+    },
+    {
+      "drug": "diazepam",
+      "pt": "Poisoning deliberate",
+      "cases": 301,
+      "eb05": 30.74,
+      "ror": 35.55,
+      "soc": "Injury, poisoning and procedural complications"
+    },
+    {
+      "drug": "midazolam",
+      "pt": "Vaginal flatulence",
+      "cases": 159,
+      "eb05": 28.8,
+      "ror": 34.26,
+      "soc": "Gastrointestinal disorders"
+    },
+    {
+      "drug": "doxepin",
+      "pt": "Movement disorder",
+      "cases": 152,
+      "eb05": 28.48,
+      "ror": 34.03,
+      "soc": "Nervous system disorders"
+    },
+    {
+      "drug": "nitrazepam",
+      "pt": "Pulmonary oedema",
+      "cases": 48,
+      "eb05": 27.2,
+      "ror": 38.47,
+      "soc": "Respiratory, thoracic and mediastinal disorders"
+    },
+    {
+      "drug": "midazolam",
+      "pt": "Radiculopathy",
+      "cases": 165,
+      "eb05": 25.9,
+      "ror": 30.6,
+      "soc": "Unclassified"
+    },
+    {
+      "drug": "doxepin",
+      "pt": "Dysarthria",
+      "cases": 119,
+      "eb05": 25.86,
+      "ror": 31.51,
+      "soc": "Nervous system disorders"
+    },
+    {
+      "drug": "nadolol",
+      "pt": "Colitis",
+      "cases": 198,
+      "eb05": 25.75,
+      "ror": 29.87,
+      "soc": "Gastrointestinal disorders"
+    },
+    {
+      "drug": "dexmedetomidine",
+      "pt": "Hyperaesthesia",
+      "cases": 23,
+      "eb05": 25.74,
+      "ror": 45.49,
+      "soc": "Nervous system disorders"
+    },
+    {
+      "drug": "fluvastatin",
+      "pt": "Activated partial thromboplastin time prolonged",
+      "cases": 38,
+      "eb05": 25.37,
+      "ror": 35.33,
+      "soc": "Investigations"
+    }
+  ],
+  "reference_set_checks": [
+    {
+      "reference_set": "OMOP",
+      "drug": "temazepam",
+      "outcome": "Acute Renal Failure",
+      "ground_truth": "negative control",
+      "matched_pt": "Acute kidney injury",
+      "cases": 6,
+      "eb05": 0.06,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "OMOP",
+      "drug": "temazepam",
+      "outcome": "Acute myocardial infarction",
+      "ground_truth": "negative control",
+      "matched_pt": "Acute myocardial infarction",
+      "cases": 0,
+      "eb05": 0.0,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "OMOP",
+      "drug": "temazepam",
+      "outcome": "Upper gastrointestinal bleeding",
+      "ground_truth": "negative control",
+      "matched_pt": "Gastrointestinal haemorrhage",
+      "cases": 10,
+      "eb05": 0.69,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "fluvastatin",
+      "outcome": "Aplastic Anemia",
+      "ground_truth": "negative control",
+      "matched_pt": null,
+      "cases": 0,
+      "eb05": null,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "timolol",
+      "outcome": "Aplastic Anemia",
+      "ground_truth": "negative control",
+      "matched_pt": "Pancytopenia",
+      "cases": 0,
+      "eb05": 0.0,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "simvastatin",
+      "outcome": "Upper gastrointestinal bleeding",
+      "ground_truth": "negative control",
+      "matched_pt": null,
+      "cases": 0,
+      "eb05": null,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "mirtazapine",
+      "outcome": "Anaphylaxis",
+      "ground_truth": "negative control",
+      "matched_pt": "Anaphylactic reaction",
+      "cases": 2,
+      "eb05": 0.02,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "atenolol",
+      "outcome": "Stevens Johnson syndrome",
+      "ground_truth": "negative control",
+      "matched_pt": "Toxic epidermal necrolysis",
+      "cases": 0,
+      "eb05": 0.0,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "atorvastatin",
+      "outcome": "Leukopenia",
+      "ground_truth": "negative control",
+      "matched_pt": null,
+      "cases": 0,
+      "eb05": null,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "timolol",
+      "outcome": "Rhabdomyolysis",
+      "ground_truth": "negative control",
+      "matched_pt": null,
+      "cases": 0,
+      "eb05": null,
+      "signal": false,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "atorvastatin",
+      "outcome": "Rhabdomyolysis",
+      "ground_truth": "positive control",
+      "matched_pt": "Rhabdomyolysis",
+      "cases": 590,
+      "eb05": 24.03,
+      "signal": true,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "rosuvastatin",
+      "outcome": "Rhabdomyolysis",
+      "ground_truth": "positive control",
+      "matched_pt": "Rhabdomyolysis",
+      "cases": 581,
+      "eb05": 18.33,
+      "signal": true,
+      "agrees": true
+    },
+    {
+      "reference_set": "EU ADR",
+      "drug": "simvastatin",
+      "outcome": "Rhabdomyolysis",
+      "ground_truth": "positive control",
+      "matched_pt": "Rhabdomyolysis",
+      "cases": 170,
+      "eb05": 7.52,
+      "signal": true,
+      "agrees": true
+    }
+  ]
+}

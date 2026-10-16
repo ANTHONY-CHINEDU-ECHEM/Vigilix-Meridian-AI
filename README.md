@@ -1,6 +1,6 @@
 # Vigilix Meridian AI
 
-**A pharmacovigilance intelligence platform that answers drug safety questions from 131 thousand cited passages, scores spontaneous reports with four disproportionality methods, mines product labels, screens interactions and pre fills causality assessment, all on local hardware with every claim verified against its evidence.**
+**A pharmacovigilance intelligence platform that answers drug safety questions from 131,000 cited passages, scores spontaneous reports with four disproportionality methods, mines product labels, screens interactions and pre fills causality assessment, all on local hardware with every claim verified against its evidence.**
 <p align="center">
 <img width="1440" height="900" alt="overview" src="https://github.com/user-attachments/assets/d4513b72-5bf7-40aa-bbc0-f031df9155e3" />
 </p>

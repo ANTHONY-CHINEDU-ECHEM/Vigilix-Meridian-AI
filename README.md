@@ -32,8 +32,6 @@ The project is built to be trusted rather than admired. Every learned component,
 
 The demo runs the full system in your browser from an exported bundle: retrieval over all 130,957 passages, the lexical LambdaMART reranker, the extractive writer, the claim verifier, signal scoring, label mining, interaction screening and case intake. Nothing you type leaves your browser.
 
-**[Open the Vigilix Meridian demo](https://claude.ai/artifact/CTnaQ9frLU7jB7SaUvsq2z)**
-
 To run it yourself with the server and an optional local model, see [Running it](#running-it).
 
 ## Screenshots
